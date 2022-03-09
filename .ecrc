@@ -1,0 +1,3 @@
+{
+  "exclude": ["node_modules", "release", "libs", "gulpfile.js", "package.json", ".stylelintrc", "\\.md$", "\\.php$"]
+}

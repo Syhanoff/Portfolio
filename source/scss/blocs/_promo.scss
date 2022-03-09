@@ -1,0 +1,54 @@
+.promo {
+  height: 100vh;
+  padding-top: 210px;
+  @include image-set('@img/Bg');
+  @include bg-cover;
+}
+.promo {
+}
+.social-wrap {
+  display: flex;
+  max-width: 358px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  &__text {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  &__decor {
+    // display: block;
+    background-color: #fff;
+    width: 100px;
+    height: 2px;
+    align-items: center;
+  }
+  &__inner {}
+  &__link {}
+}
+
+.offer {
+  &__label {
+
+  }
+  &__title {
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-top: 13px;
+    max-width: 511px;
+    width: 100%;
+  }
+  &__btns {
+    display: flex;
+    margin-top: 50px;
+  }
+  &__btn {
+    padding: 10px 25px;
+    &:first-child {
+      margin-right: 40px;
+    }
+  }
+}
+.hamburger {
+}
