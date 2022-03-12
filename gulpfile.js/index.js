@@ -71,7 +71,7 @@ exports.favicon = favicon;
 
 
 // Сборка
-const build = series(clear, parallel(html, img, ogimg, favicon, svg, fonts, fontFace, assets, js), scss);
+const build = series(clear, parallel(html, img, ogimg, favicon, svg, fonts, assets, js), fontFace, scss);
 const dev = series(build, parallel(watcher, server));
 exports.default = setting.isProd ? build : dev;
 exports.deployZip = series(build, zip);
