@@ -30,8 +30,28 @@
     font-size: 24px;
     text-align: left;
     margin-top: 15px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      position: absolute;
+      top: 10px;
+      left: -35px;
+      transition: all .6s;
+      }
+    &:hover {
+      &::before {
+      background-color: $second-accent-color;
+      }
+    }
     & a {
       color: $secondary-color;
+      transition: all .6s;
+      &:hover {
+        color: $second-accent-color;
+      }
     }
     &:first-child {
       margin-top: 0;

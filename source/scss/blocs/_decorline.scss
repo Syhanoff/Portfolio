@@ -1,0 +1,12 @@
+.decorline {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: $first-accent-color;
+    top: 62px;
+    position: absolute;
+  }
+}
