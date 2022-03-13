@@ -8,6 +8,11 @@
 
 .subtitle {
   line-height: 1.25;
-  font-size: 16px;
   color: $secondary-color;
+  &_large {
+    font-size: 20px;
+  }
+  &_small {
+    font-size: 16px;
+  }
 }

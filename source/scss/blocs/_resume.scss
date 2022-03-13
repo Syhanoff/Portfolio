@@ -1,0 +1,78 @@
+.resume {
+  padding-top: 120px;
+  &__label {}
+  &__title {
+
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 140px;
+    // margin-top: 60px;
+    padding: 60px 100px 100px 100px;
+  }
+  &__colomn {
+    padding-left: 50px;
+  }
+  &__subtitle {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      background-color: $first-accent-color;
+      display: block;
+      border-radius: 100%;
+    }
+  }
+  &__wrapper {
+    padding: 46px 0 0 0;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: -43px;
+      top: -5px;
+      width: 1px;
+      height: calc(100% + 5px);
+      display: block;
+      background-color: $secondary-color;
+    }
+  }
+  &__inner {
+    display: flex;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 43px;
+      display: block;
+      left: -43px;
+      top: 18px;
+      background-color: $secondary-color;
+    }
+  }
+  &__content {
+
+  }
+  &__header {}
+  &__desc {
+    margin-top: 5px;
+  }
+  &__txt {
+    margin-top: 11px;
+  }
+}
+
+.resume-item {
+  &__background-box {
+    margin-right: 20px;
+  }
+  &__icon {}
+}
+

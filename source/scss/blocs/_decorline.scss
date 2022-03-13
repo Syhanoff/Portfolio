@@ -9,4 +9,10 @@
     top: 62px;
     position: absolute;
   }
+  &_center {
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }

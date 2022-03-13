@@ -16,4 +16,12 @@
     position: absolute;
     z-index: -1;
   }
+  &_center {
+    padding-left: 0;
+    text-align: center;
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
