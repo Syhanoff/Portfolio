@@ -60,6 +60,8 @@
 }
 
 .offer {
+  display: flex;
+  justify-content: space-between;
   &__title {
     font-size: 48px;
     font-family: 'Poppins', sans-serif;
@@ -80,5 +82,8 @@
     &_noactive {
       background-color: #1F1E1C;
     }
+  }
+  &__img {
+    margin-top: -154px;
   }
 }

@@ -1,14 +1,9 @@
 .resume {
   padding-top: 120px;
-  &__label {}
-  &__title {
-
-  }
   &__box {
     display: grid;
     grid-template-columns: repeat(2, 400px);
     column-gap: 140px;
-    // margin-top: 60px;
     padding: 60px 100px 100px 100px;
   }
   &__colomn {
@@ -57,10 +52,6 @@
       background-color: $secondary-color;
     }
   }
-  &__content {
-
-  }
-  &__header {}
   &__desc {
     margin-top: 5px;
   }
@@ -68,11 +59,9 @@
     margin-top: 11px;
   }
 }
-
 .resume-item {
   &__background-box {
     margin-right: 20px;
   }
-  &__icon {}
 }
 

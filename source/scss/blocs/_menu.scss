@@ -7,7 +7,7 @@
   z-index: 1000;
   width: 100vw;
   height: 100vh;
-  transition: all 0.6s;
+  transition: all .6s ease;
   &.active {
     left: 0;
     visibility: visible;
@@ -20,7 +20,6 @@
     background-color: $first-accent-color;
     display: block;
     position: fixed;
-    transition: all 0.6s;
     z-index: 100;
   }
   &__list {
@@ -39,7 +38,7 @@
       position: absolute;
       top: 10px;
       left: -35px;
-      transition: all .6s;
+      transition: all .6s ease;
       }
     &:hover {
       &::before {
@@ -48,7 +47,6 @@
     }
     & a {
       color: $secondary-color;
-      transition: all .6s;
       &:hover {
         color: $second-accent-color;
       }
