@@ -85,5 +85,10 @@
   }
   &__img {
     margin-top: -154px;
+    filter: grayscale(100%);
+    transition: all .6s ease;
+    &:hover {
+      filter: grayscale(0%);
+    }
   }
 }

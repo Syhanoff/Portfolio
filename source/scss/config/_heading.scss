@@ -2,12 +2,14 @@
   text-align: center;
   line-height: 1.5;
   font-size: 36px;
+  font-weight: 700;
   color: $secondary-color;
   font-family: 'Poppins', sans-serif;
 }
 
 .subtitle {
   line-height: 1.25;
+  font-weight: 700;
   color: $secondary-color;
   &_large {
     font-size: 20px;
