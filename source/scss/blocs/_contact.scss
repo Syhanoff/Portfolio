@@ -1,0 +1,108 @@
+.contact {
+  padding: 120px 0 100px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-template-rows: 600px;
+    column-gap: 80px;
+  }
+  &__content {
+    padding-top: 7px;
+  }
+  &__title {
+    text-align: left;
+  }
+  &__subtitle {
+    &-social {
+    margin-top: 60px;
+    }
+    &-form {
+      margin-top: 30px;
+    }
+  }
+  &__social {
+    margin-top: 20px;
+  }
+  &__link {
+    margin-right: 15px;
+  }
+  &__form {
+    margin-top: 20px;
+    display: grid;
+    // grid-template: repeat(3, 45px auto auto) / repeat(2, 1fr);
+    grid-template-columns: minmax(300px, auto) minmax(340px, auto);
+    grid-template-rows: 45px 180px 45px;
+    gap: 20px;
+    input, textarea {
+      width: 100%;
+      height: 100%;
+      background-color: $primary-color;
+      border: 1px solid $secondary-color;
+      padding: 0 20px 0 20px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+      label {
+      position: absolute;
+      padding: 0 10px;
+      top: -10px;
+      left: 12px;
+      background-color: $primary-color;
+    }
+  }
+  &__form-name {
+    position: relative;
+  }
+  &__form-email {
+    position: relative;
+  }
+  &__form-text {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    position: relative;
+  }
+  &__form-send {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+    display: flex;
+  }
+  &__btn {
+    margin-right: 100px;
+  }
+  &__form-policy {
+    align-items: center;
+    display: flex;
+    label {
+      position: static;
+      a {
+        color: $secondary-color;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    input {
+      width: 10px;
+      height: 15px;
+      background-color: $primary-color;
+      border: 1px solid $secondary-color;
+    }
+  }
+}
+
+.container {
+}
+.image {
+}
+.label {
+}
+.title {
+}
+.decorline {
+}
+.subtitle {
+  &_small {}
+}
+.btn {
+}
+.form-wrapper {
+  &__agree-content {}
+}

@@ -75,11 +75,10 @@
     margin-top: 50px;
   }
   &__btn {
-    padding: 10px 25px;
     &:first-child {
       margin-right: 40px;
     }
-    &_noactive {
+    &_notactive {
       background-color: #1F1E1C;
     }
   }
