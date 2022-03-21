@@ -1,5 +1,5 @@
 const { src, dest } = require('gulp');
-// const browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 
 
 // Плагины
@@ -37,8 +37,8 @@ const htmlTask = () => {
     .pipe(gulpif(setting.isProd, size({ title: "html" })))
     .pipe(gulpif(setting.isProd, htmlmin(setting.htmlmin)))
     .pipe(gulpif(setting.isProd, size({ title: "htmlmin" })))
-    .pipe(dest(route.html.dest));
-    // .pipe(browserSync.stream());
+    .pipe(dest(route.html.dest))
+    .pipe(browserSync.stream());
 }
 
 module.exports = htmlTask;

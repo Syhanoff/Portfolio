@@ -1,5 +1,5 @@
 const { src, dest } = require('gulp');
-// const browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 
 
 // Плагины
@@ -67,8 +67,8 @@ const stylesTask = () => {
     .pipe(gulpif(setting.isProd, size({
       title: "style.min.css"
     })))
-    .pipe(dest(route.scss.dest, { sourcemaps: setting.isDev }));
-    // .pipe(browserSync.stream());
+    .pipe(dest(route.scss.dest, { sourcemaps: setting.isDev }))
+    .pipe(browserSync.stream());
 }
 
 

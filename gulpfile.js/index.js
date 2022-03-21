@@ -38,8 +38,8 @@ const server = () => {
 
 // Наблюдение
 const watcher = () => {
-  watch(route.html.watch, html).on('change', browserSync.reload);
-  watch(route.scss.watch, scss).on('change', browserSync.reload);
+  watch(route.html.watch, html);
+  watch(route.scss.watch, scss);
   watch((route.fonts.watch), fonts).on('all', browserSync.reload);
   watch((route.fonts.dest), fontFace).on('all', browserSync.reload);
   watch((route.img.watch), img).on('all', browserSync.reload);
