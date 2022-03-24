@@ -3,57 +3,48 @@
   &__wrapper {
     margin-top: 60px;
     display: grid;
-    // grid-template: repeat(2, minmax(270px, 1fr)) / repeat(4, minmax(270px, 1fr));
     grid-template: repeat(2, 270px) / repeat(4, 270px);
     gap: 20px;
-    grid-auto-columns: minmax(270px, 1fr);
-    grid-auto-rows: minmax(270px, 1fr);
+    grid-auto-columns: 270px;
+    grid-auto-rows: 270px;
 
   }
   &__inner {
-    padding: 30px 29px 10px 29px;
     border: 1px solid $primary-color;
     transition: all .6s ease;
     position: relative;
     perspective: 540px;
+    border: 1px solid $second-accent-color;
+    &:hover {
+      border: 1px solid $primary-color;
+
+    }
     &-back {
       width: 100%;
       height: 100%;
       display: block;
-      border: 1px solid $primary-color;
       position: absolute;
       top: 0;
       left: 0;
-      // z-index: 60;
-      border: 1px solid $second-accent-color;
-      transition: all .3s ease;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &:hover {
-        opacity: 0;
-      }
-      img {
-        width: 50%;
-        height: 50%;
-      }
+      z-index: 60;
     }
   }
-  &__icon-1 {
+  &__icon {
     position: absolute;
     top: 0;
     left: 0;
-    // z-index: 50;
     transform: rotate3d(1,0,0, 90deg);
     width: 100%;
     height: 100%;
-    padding: 30px 20px 10px 29px;
+    padding: 20px 20px 10px 20px;
+    z-index: 50;
+    background-color: rgba(49, 255, 238, 10%);
   }
   &__subtitle {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   &__desc {
-    margin-top: 15px;
+    margin-top: 10px;
   }
   &__levels {
     margin-top: 120px;
@@ -97,8 +88,6 @@
 }
 
 
-
-
 $duration: 600ms;
 $timing-fn: ease;
 // $turquoise: #1ABC9C;
@@ -126,36 +115,36 @@ $timing-fn: ease;
 //   background-color: transparentize($turquoise, .1);
 // }
 
-.in-top .skills__icon-1 {
+.in-top .skills__icon {
   transform-origin: 50% 0%;
   animation: in-top $duration $timing-fn 0ms 1 forwards;
 }
-.in-right .skills__icon-1 {
+.in-right .skills__icon {
   transform-origin: 100% 0%;
   animation: in-right $duration $timing-fn 0ms 1 forwards;
 }
-.in-bottom .skills__icon-1 {
+.in-bottom .skills__icon {
   transform-origin: 50% 100%;
   animation: in-bottom $duration $timing-fn 0ms 1 forwards;
 }
-.in-left .skills__icon-1 {
+.in-left .skills__icon {
   transform-origin: 0% 0%;
   animation: in-left $duration $timing-fn 0ms 1 forwards;
 }
 
-.out-top .skills__icon-1 {
+.out-top .skills__icon {
   transform-origin: 50% 0%;
   animation: out-top $duration $timing-fn 0ms 1 forwards;
 }
-.out-right .skills__icon-1 {
+.out-right .skills__icon {
   transform-origin: 100% 50%;
   animation: out-right $duration $timing-fn 0ms 1 forwards;
 }
-.out-bottom .skills__icon-1 {
+.out-bottom .skills__icon {
   transform-origin: 50% 100%;
   animation: out-bottom $duration $timing-fn 0ms 1 forwards;
 }
-.out-left .skills__icon-1 {
+.out-left .skills__icon {
   transform-origin: 0% 0%;
   animation: out-left $duration $timing-fn 0ms 1 forwards;
 }
