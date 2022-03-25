@@ -1,7 +1,10 @@
 /* Extra Large: ≥1200px */
-@media (max-width: 1200px) {
+@media (max-width: 1439px) {
   .container {
     max-width: 1140px;
+  }
+  .social-wrap {
+    display: none;
   }
 }
 
@@ -10,6 +13,7 @@
   .container {
     max-width: 960px;
   }
+
 }
 
 /* Medium: 768px - 991px */
