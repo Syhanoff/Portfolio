@@ -1,10 +1,7 @@
 /* Extra Large: ≥1200px */
-@media (max-width: 1439px) {
+@media (min-width: 1200px) {
   .container {
     max-width: 1140px;
-  }
-  .social-wrap {
-    display: none;
   }
 }
 
@@ -13,23 +10,223 @@
   .container {
     max-width: 960px;
   }
-
+  .about {
+    &__wrapper {
+    gap: 30px 30px;
+    }
+  }
+  .resume {
+    &__box {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 100px;
+      padding: 0;
+    }
+  }
+  .skill {
+    &-items {
+    grid-template: auto auto / auto auto;
+    gap: 10px;
+    }
+    &-item {
+      &__txt {
+        margin-top: 5px;
+      }
+    }
+  }
+  .skills {
+    &__wrapper {
+      grid-template: repeat(3, 270px) / repeat(3, 270px);
+      gap: 20px;
+      justify-content: center;
+    }
+    &__levels {
+      grid-template: repeat(2, 70px) / repeat(2, 350px);
+      justify-content: center;
+    }
+  }
+  .portfolio {
+    padding-top: clamp(40px, 7vw, 120px);
+    &__wrapper {
+      margin-top: clamp(30px, 5vw, 50px);
+      // display: grid;
+      // grid-template: repeat(2, 270px) / repeat(4, 270px);
+      // gap: 20px;
+    }
+  }
+  // .vertical {
+  //   grid-row: 1 / 3;
+  //   grid-column: 4 / 5;
+  // }
+  // .horizontal {
+  //   grid-row: 2 / 3;
+  //   grid-column: 2 / 4;
+  // }
 }
 
 /* Medium: 768px - 991px */
 @media (max-width: 991px) {
   .container {
-    max-width: 750px;
+    max-width: 730px;
+  }
+  .about {
+    &__wrapper {
+    grid-template: auto auto / 250px auto;
+    }
+  }
+  .resume {
+    &__box {
+      column-gap: 80px;
+    }
+  }
+  .skill {
+    &-items {
+    grid-template: auto auto / auto;
+    }
+  }
+  .skills {
+    &__wrapper {
+      grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+      grid-auto-rows: 1fr;
+      gap: 10px;
+      justify-content: center;
+    }
+    &__inner {
+      position: static;
+      perspective: initial;
+      &:hover {
+        border: 1px solid $second-accent-color;
+      }
+      &-back {
+        display: none;
+      }
+    }
+    &__icon {
+      position: static;
+      transform: rotate3d(0,0,0, 0deg);
+      background-color: $primary-color;
+    }
+    &__levels {
+      grid-template: repeat(2, 70px) / repeat(2, 300px);
+    }
   }
 }
+
 
 /* Small: 576px - 767px */
 @media (max-width: 767px) {
   .container {
 		max-width: 540px;
 	}
+  // .promo {
+  // @include image-set('@img/cover2');
+  // @include bg-cover;
+  // }
+  .offer {
+    &__img {
+      display: none;
+    }
+    &__title {
+      max-width: 350px;
+    }
+  }
+  .btn {
+    box-shadow: none;
+  }
+  .hamburger {
+    top: 20px;
+    left: 20px;
+  }
+  .about {
+    &__wrapper {
+      grid-template: auto / auto;
+      column-gap: 0px;
+    }
+    &__img {
+      &-desc {
+        display: none;
+      }
+      &-mob {
+        display: block;
+      }
+    }
+  }
+  .resume {
+    &__box {
+      grid-template-columns: auto;
+      gap: 40px 0;
+      padding: 0;
+    }
+  }
+  .skill {
+    &-items {
+    grid-template: auto auto / auto;
+    }
+    &-item {
+      &__content {
+        width: 100%;
+      }
+    }
+  }
+  .skills {
+    &__wrapper {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    &__levels {
+      grid-template: repeat(2, 70px) / 400px;
+    }
+  }
 }
 
 /* Extra small: 0px (320px) - 575px */
 @media (max-width: 575px) {
+  .container {
+    padding: 0 15px;
+  }
+  .menu {
+    &__block {
+    max-width: 250px;
+    }
+    &__list {
+      margin-left: 40px;
+    }
+  }
+  .skills {
+    &__wrapper {
+      grid-template: repeat(2, 1fr) / 1fr;
+      gap: 20px;
+      justify-items: center;
+    }
+    &__inner {
+      width: 270px;
+    }
+    &__levels {
+      grid-template: repeat(2, 70px) / minmax(290px, 400px);
+    }
+  }
+}
+
+/* Hid social block */
+@media (max-width: 1439px) {
+  .social-wrap {
+    display: none;
+  }
+}
+
+
+/* Adaptive Image Replacement */
+@media (min-width: 768px) {
+  .about__img-mob {
+    display: none;
+  }
+}
+
+/* Decorline fix */
+@media (max-width: 337px) {
+  .skills {
+    &__title.decorline {
+      &::after {
+        top:75px;
+      }
+    }
+  }
 }

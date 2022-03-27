@@ -1,28 +1,11 @@
 .portfolio {
-  padding-top: 120px;
+  padding-top: clamp(40px, 7vw, 120px);
   &__wrapper {
-    margin-top: 60px;
+    margin-top: clamp(30px, 5vw, 50px);
     display: grid;
     grid-template: repeat(2, 270px) / repeat(4, 270px);
     gap: 20px;
   }
-  &__link {}
-}
-.container {
-}
-.skills {
-  &__label {}
-  &__title {}
-}
-.label {
-  &_center {}
-}
-.title {
-}
-.decorline {
-  &_center {}
-}
-.image {
 }
 .vertical {
   grid-row: 1 / 3;

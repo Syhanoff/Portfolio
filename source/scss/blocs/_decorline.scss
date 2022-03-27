@@ -6,7 +6,7 @@
     width: 60px;
     height: 2px;
     background-color: $first-accent-color;
-    top: 62px;
+    top: clamp(42px, 7vw, 62px);
     position: absolute;
   }
   &_center {

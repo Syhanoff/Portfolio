@@ -1,10 +1,11 @@
 .resume {
-  padding-top: 120px;
+  padding-top: clamp(40px, 7vw, 120px);
   &__box {
     display: grid;
     grid-template-columns: repeat(2, 400px);
     column-gap: 140px;
-    padding: 60px 100px 100px 100px;
+    margin-top: clamp(30px, 5vw, 50px);
+    padding: 0 100px 100px 100px;
   }
   &__colomn {
     padding-left: 50px;
