@@ -1,5 +1,5 @@
 .contact {
-  padding: 120px 0 100px;
+  padding-top: clamp(40px, 7vw, 120px);
   &__wrapper {
     display: grid;
     grid-template-columns: 400px auto;
@@ -14,7 +14,7 @@
   }
   &__subtitle {
     &-social {
-    margin-top: 60px;
+      margin-top: clamp(30px, 5vw, 60px);
     }
     &-form {
       margin-top: 30px;
