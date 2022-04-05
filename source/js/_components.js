@@ -5,3 +5,4 @@ import './modules/hamburger';
 import './modules/skillsline';
 import './modules/mouse';
 import './modules/card';
+import './modules/parallax';

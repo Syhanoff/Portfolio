@@ -1,4 +1,4 @@
-document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+document.getElementsByTagName("body")[0].addEventListener("mousemove", (n) => {
   t.style.left = n.clientX + "px",
   t.style.top = n.clientY + "px",
   e.style.left = n.clientX + "px",
@@ -6,22 +6,24 @@ document.getElementsByTagName("body")[0].addEventListener("mousemove", function(
   i.style.left = n.clientX + "px",
   i.style.top = n.clientY + "px"
 });
-var t = document.getElementById("cursor"),
-    e = document.getElementById("cursor2"),
-    i = document.getElementById("cursor3");
+const t = document.getElementById("cursor"),
+      e = document.getElementById("cursor2"),
+      i = document.getElementById("cursor3");
+
 function n(t) {
-  e.classList.add("hover", "hover-2"), i.classList.add("hover", "hover-2")
+  e.classList.add("hover"), i.classList.add("hover")
 }
 function s(t) {
-  e.classList.remove("hover", "hover-2"), i.classList.remove("hover", "hover-2")
+  e.classList.remove("hover"), i.classList.remove("hover")
 }
 s();
-for (var r = document.querySelectorAll(".hover-mouse, .hover-mouse-2"), a = r.length - 1; a >= 0; a--) {
+for (var r = document.querySelectorAll(".hover-mouse"), a = r.length - 1; a >= 0; a--) {
   o(r[a])
 }
 function o(t) {
-  t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+  t.addEventListener("mouseover", n), t.addEventListener("mouseout", s);
 }
+
 document.addEventListener('DOMContentLoaded', function () {
   var hoverLink = document.querySelector('.img-1');
   var bodychange = document.querySelector('body');
@@ -88,3 +90,5 @@ document.addEventListener('DOMContentLoaded', function () {
       bodychange.classList.remove('img-6-wrap');
   })
 })
+
+

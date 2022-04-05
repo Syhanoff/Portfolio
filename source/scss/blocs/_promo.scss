@@ -61,7 +61,7 @@
   display: flex;
   justify-content: space-between;
   &__title {
-    @include adaptiv-font(48,26);
+    @include adaptiv-font(80,44);
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     margin-top: 13px;
@@ -84,8 +84,87 @@
     margin-top: -154px;
     filter: grayscale(100%);
     transition: all .6s ease;
+    z-index: 1;
+    position: relative;
     &:hover {
       filter: grayscale(0%);
     }
+		&::before, &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(45deg, $first-accent-color, $second-accent-color, $secondary-color);
+      // background-size: 400%;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      animation: animated-shadow 20s linear infinite alternate;
+    }
+		&::after {
+			filter: blur(30px);
+    }
   }
+}
+
+@keyframes animated-shadow {
+	from {
+		background-position: 0 0;
+  }
+	50% {
+		background-position: 100% 0;
+  }
+	to {
+		background-position: 0 0;
+  }
+}
+
+.glitch{
+  position: relative;
+  &:before,
+  &:after{
+    content: 'Hello, world!';
+    opacity: 0.8;
+    position: absolute;
+    top:0;
+    left:0;
+  }
+  &:before{
+    color: $first-accent-color;
+    z-index: -1;
+  }
+  &:after{
+    color: $second-accent-color;
+    z-index: -2;
+  }
+  &:hover {
+        &:before {
+            animation: glitch .9s cubic-bezier(.25, .46, .45, .94) both infinite
+        }
+        &:after {
+            animation: glitch .7s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+        }
+    }
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0)
+    }
+    20% {
+        transform: translate(-5px, 5px);
+        transform: skewX(10deg);
+    }
+    40% {
+        transform: translate(-5px, -5px);
+    }
+    60% {
+        transform: translate(5px, 5px)
+    }
+    80% {
+        transform: translate(5px, -5px)
+    }
+    to {
+        transform: translate(0)
+    }
 }

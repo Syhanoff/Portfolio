@@ -44,17 +44,13 @@
       height: 220px;
       width: 320px;
       border:none;
-      border-radius: 0;
+      border-radius: 10px;
       background-size: cover;
     }
   }
 }
 
-@media screen and (max-width: 1200px){
-	.cursor,.cursor2{
-		display: none;
-	}
-}
+
 
 
 

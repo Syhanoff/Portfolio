@@ -17,7 +17,6 @@ class Item {
     this.element.addEventListener('mouseover', (ev) => this.update(ev, 'in'));
     this.element.addEventListener('mouseout', (ev) => this.update(ev, 'out'));
   }
-
   update(ev, prefix) {
     this.element.classList.remove(...classNames);
     this.element.classList.add(`${prefix}-${directions[getDirectionKey(ev, this.element)]}`);
