@@ -8,8 +8,18 @@
     gap: 10px;
   }
   &__link {
+    transition: all .6s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
     img {
       height: 100%;
     }
   }
 }
+
+
+
+
+
+

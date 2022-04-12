@@ -1,5 +1,6 @@
 .contact {
   padding-top: clamp(40px, 7vw, 120px);
+  padding-bottom: clamp(20px, 7vw, 60px);
   &__wrapper {
     display: grid;
     grid-template-columns: 400px auto;

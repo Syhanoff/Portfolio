@@ -1,0 +1,125 @@
+.modal {
+  &__wrapper {
+    display: none;
+    padding: 40px 60px;
+    background: $primary-color;
+    // box-shadow: 0px 0px 5px $second-accent-color;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+  &__video-box {
+    position: relative;
+  }
+  &__video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: solid 4px #fff;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .6s ease;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-style: solid;
+      border-width: 10px 0 10px 20px;
+      border-color: transparent transparent transparent #fff;
+      transition: all .6s ease;
+    }
+    &:hover {
+      width: 80px;
+      height: 80px;
+      &::before {
+        border-width: 12px 0px 12px 25px;
+      }
+    }
+  }
+  &__video {
+
+  }
+  &__img {}
+  &__inner {
+    margin-top: 30px;
+  }
+  &__label {}
+  &__title {
+    text-align: left;
+  }
+  &__desc {
+    margin-top: 20px;
+    max-width: 600px;
+    width: 100%;
+  }
+  &__links {
+    margin-top: 20px;
+    display: flex;
+  }
+  &__link {
+    margin-right: 50px;
+    transition: all .6s ease;
+    width: 20px;
+    height: 20px;
+    &:hover {
+      transform: scale(2) rotate(360deg);
+      svg path {
+        fill: $second-accent-color
+      }
+    }
+  }
+  &__close {
+    background-color: transparent;
+    display: block;
+    color: $first-accent-color;
+    font-size: 50px;
+    line-height: 25px;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    transition: all .6s ease;
+    &:hover {
+      transform: scale(1.5) rotate(360deg);
+      color: $second-accent-color;
+    }
+  }
+  &__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    opacity: .75;
+    z-index: 99;
+  }
+  .active {
+    display: block;
+    animation: slit-in-vertical 0.45s ease-out both;
+  }
+}
+
+
+@keyframes slit-in-vertical {
+  0% {
+    transform: translateZ(0) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    transform: translateZ(-25%) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(-50%) rotateY(0);
+  }
+}
