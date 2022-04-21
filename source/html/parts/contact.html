@@ -21,10 +21,10 @@
           </a>
         </div>
         <h3 class="contact__subtitle-form subtitle subtitle_small">Или оставьте ваши данные и я сам вам напишу:</h3>
-        <form action="#" class="contact__form hover-mouse">
+        <form action="mail.php" id="form" class="contact__form hover-mouse" method="POST" autocomplete="off">
           <div class="contact__form-name">
             <label for="name">Ваше имя</label>
-            <input type="text" name="name" id="name" placeholder="Стасямба" required>
+            <input type="text" name="Имя" id="name" placeholder="Станислав" required>
           </div>
           <div class="contact__form-email">
             <label for="email">Ваша почта</label>
@@ -32,8 +32,10 @@
           </div>
           <div class="contact__form-text">
             <label for="text">Ваше сообщение</label>
-            <textarea name="text" id="text"></textarea>
+            <textarea name="Сообщение" id="text" cols="30" rows="10"
+            placeholder="Тут много текста"></textarea>
           </div>
+          <input type="hidden" id="token" name="token">
           <div class="contact__form-send">
             <button type="submit" class="contact__btn btn">Отправить сообщение</button>
             <div class="contact__form-policy">

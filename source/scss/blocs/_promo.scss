@@ -3,60 +3,6 @@
   padding-top: 210px;
 }
 
-.social-wrap {
-  display: flex;
-  flex-direction: column-reverse;
-  max-height: 358px;
-  height: 100%;
-  width: 20px;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 50%;
-  left: 50px;
-  transform: translateY(-50%);
-  &__text {
-    font-weight: 700;
-    font-size: 16px;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-  }
-  &__decor {
-    background-color: #fff;
-    width: 2px;
-    height: 100px;
-    align-items: center;
-  }
-  &__inner {
-    height: 90px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column-reverse;
-    &_menu {
-      height: 20px;
-      width: 90px;
-      flex-direction: row;
-      position: absolute;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-
-    }
-  }
-  &__link {
-    transform: rotate(-90deg);
-    &:hover {
-      svg path {
-        fill: $second-accent-color
-      }
-    }
-    &_menu {
-      transform: rotate(0deg);
-      // margin: 0 auto;
-    }
-  }
-}
-
 .offer {
   display: flex;
   justify-content: space-between;
