@@ -1,6 +1,5 @@
 const modalСonfirm = document.querySelector('.modal__wrapper[data-modal="mail"]');
 const modalСonfirmСlose = document.querySelector('.modal__btn');
-
 const validation = new JustValidate('#form',
 {
   tooltip: {
@@ -53,12 +52,11 @@ validation
   },
 ])
 
-
 document.querySelector('form').addEventListener('submit', (e) => {
   e.preventDefault();
   let tk = '';
   grecaptcha.ready(function() {
-    grecaptcha.execute('6LdcJogfAAAAAC7vgUToA6VhqgKNsKS9rw9ZGi6s', {action: 'homepage'}).then(function(token) {
+    grecaptcha.execute('.', {action: 'homepage'}).then(function(token) {
       tk = token;
       document.getElementById('token').value = token;
       const data = new URLSearchParams();
@@ -73,18 +71,11 @@ document.querySelector('form').addEventListener('submit', (e) => {
       .then(result => {
         if (result['om_score'] >= 0.5) {
           console.log('Человек')
-          // отправка данных на почту
-
-
           .onSuccess((event) => {
             console.log('Validation passes and form submitted', event);
-
             let formData = new FormData(event.target);
-
             console.log(...formData);
-
             let xhr = new XMLHttpRequest();
-
             xhr.onreadystatechange = function () {
               if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
@@ -93,15 +84,10 @@ document.querySelector('form').addEventListener('submit', (e) => {
                 }
               }
             }
-
             xhr.open('POST', 'mail.php', true);
             xhr.send(formData);
-
             event.target.reset();
           });
-
-
-
         } else {
           console.log('Бот')
         }
@@ -109,11 +95,6 @@ document.querySelector('form').addEventListener('submit', (e) => {
     });
   });
 })
-
-
-
-
-
 
 modalСonfirmСlose.addEventListener('click', function() {
   modalСonfirm.classList.remove('active');

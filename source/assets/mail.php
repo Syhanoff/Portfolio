@@ -32,15 +32,15 @@ try {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-  $mail->Username   = 's.syhanoff@yandex.ru'; // Логин на почте
-  $mail->Password   = 'vzpxshdvzepftbzm'; // Пароль на почте
+  $mail->Username   = '.'; // Логин на почте
+  $mail->Password   = '.'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('s.syhanoff@yandex.ru', 'Сообщение с моего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('.', 'Сообщение с моего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('s.syhanoff@yandex.ru');
+  $mail->addAddress('.');
 
   // Отправка сообщения
   $mail->isHTML(true);
@@ -59,7 +59,7 @@ if(isset($_POST['token'])){
   $captcha=$_POST['token'];
 }
 
-$secretKey = "6LdcJogfAAAAADh1Y0KgblvzIInTsF7MLxEHV3-E";
+$secretKey = ".";
 $ip = $_SERVER['REMOTE_ADDR'];
 
 // post request to server
