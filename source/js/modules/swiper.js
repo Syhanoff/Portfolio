@@ -1,13 +1,10 @@
+import Swiper from 'swiper/bundle';
+
 const swiper = new Swiper('.swiper', {
-
-
   loop: true,
-  stopOnLastSlide : false,
+  // stopOnLastSlide : false,
 	speed : 500,
-	autoplay : {
-		delay: 2000
+	autoplay: {
+		delay: 3000,
 	}
-
-
-
 });

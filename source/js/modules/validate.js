@@ -1,5 +1,7 @@
 const modalСonfirm = document.querySelector('.modal__wrapper[data-modal="mail"]');
 const modalСonfirmСlose = document.querySelector('.modal__btn');
+
+import JustValidate from 'just-validate';
 const validation = new JustValidate('#form',
 {
   tooltip: {

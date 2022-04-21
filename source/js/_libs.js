@@ -1,5 +1,5 @@
 // Пример импорта из папки
-// import './libs/slick.min.js';
+import './libs/focus-visible.js';
 
 // Пример импорта из node-модулей
 // import $ from "jquery";

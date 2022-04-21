@@ -5,7 +5,7 @@ const { src, dest } = require('gulp');
 const plumber = require('gulp-plumber');
 const notify = require("gulp-notify");
 const webpack = require('webpack-stream');
-const babel = require('gulp-babel');
+// const babel = require('gulp-babel');
 
 
 // Конфигурация
@@ -22,39 +22,40 @@ const scriptsTask = () => {
       message: "Error: <%= error.message %>"
       })
     ))
-    .pipe(babel())
     .pipe(webpack({
       mode: setting.isProd ? 'production' : 'development',
       output: {
-        filename: 'main.min.js'
+        filename: 'main.min.js',
+      },
+      module: {
+        rules: [{
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['@babel/preset-env', {
+                  targets: "defaults"
+                }]
+              ]
+            }
+          }
+        }]
       }
+      // devtool: !isProd ? 'source-map' : false
     }))
+    // .pipe(babel())
     // .pipe(webpack({
-    //   mode: noBuild ? 'production' : 'development',
+    //   mode: setting.isProd ? 'production' : 'development',
     //   output: {
-    //     filename: 'main.min.js',
-    //   },
-    //   module: {
-    //     rules: [{
-    //       test: /\.m?js$/,
-    //       exclude: /node_modules/,
-    //       use: {
-    //         loader: 'babel-loader',
-    //         options: {
-    //           presets: [
-    //             ['@babel/preset-env', {
-    //               targets: "defaults"
-    //             }]
-    //           ]
-    //         }
-    //       }
-    //     }]
+    //     filename: 'main.min.js'
     //   }
     // }))
-    // .on('error', function (err) {
-    //   console.error('WEBPACK ERROR', err);
-    //   this.emit('end');
-    // })
+    .on('error', function (err) {
+      console.error('WEBPACK ERROR', err);
+      this.emit('end');
+    })
     .pipe(dest(route.js.dest), { sourcemaps: setting.isDev });
 }
 
