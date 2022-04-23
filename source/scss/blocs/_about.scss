@@ -18,9 +18,19 @@
   }
   &__txt {
     margin-top: clamp(30px, 5vw, 50px);
-    // width: 100%;
+    width: 100%;
+    p:not(:first-child ) {
+      margin-top: 5px;
+    }
   }
 }
+
+// .split-text {
+//   div {
+//     display: inline-block;
+//   }
+// }
+
 .skill-items {
   display: grid;
   grid-template: auto auto / auto auto;

@@ -12,6 +12,9 @@ import './modules/swiper';
 import './modules/slider';
 import './modules/validate';
 import './modules/smooth-scroll';
+import './modules/cookies';
+// import './modules/counter';
+// import './modules/gsap';
 
 
 
