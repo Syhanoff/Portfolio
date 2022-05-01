@@ -1,7 +1,7 @@
 // Пример
 // import './modules/slider';
 
-import './modules/hamburger';
+import './modules/burger';
 import './modules/skillsline';
 import './modules/mouse';
 import './modules/card';
@@ -13,8 +13,10 @@ import './modules/slider';
 import './modules/validate';
 import './modules/smooth-scroll';
 import './modules/cookies';
+// import './modules/liquid-foto';
 // import './modules/counter';
-// import './modules/gsap';
+import './modules/gsap';
+import './modules/theme';
 
 
 

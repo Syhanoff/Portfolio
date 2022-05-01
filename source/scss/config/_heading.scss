@@ -3,14 +3,14 @@
   line-height: 1.5;
   @include adaptiv-font(36,24);
   font-weight: 700;
-  color: $secondary-color;
+  color: var(--color-second);
   font-family: 'Poppins', sans-serif;
 }
 
 .subtitle {
   line-height: 1.25;
   font-weight: 700;
-  color: $secondary-color;
+  color: var(--color-second);
   &_large {
     font-size: 20px;
   }

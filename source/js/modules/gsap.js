@@ -1,31 +1,141 @@
-// import { gsap } from "gsap";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+const text1 = document.querySelector('.split-text1'),
+      text2 = document.querySelector('.split-text2'),
+      text3 = document.querySelector('.split-text3');
 
-const text = document.querySelector('.split-text');
-
-const splitText = (el) => {
+const splitText1 = (el) => {
 	el.innerHTML = el.textContent.replace(/(\S*)/g, m => {
-  return `<div class="word">` +
-			m.replace(/(-|#|@)?\S(-|#|@)?/g, "<div class='letter'>$&</div>") +
+  return `<div class="word1">` +
+			m.replace(/(-|#|@)?\S(-|#|@)?/g, "<div class='letter1'>$&</div>") +
 			`</div>`;
 	});
 	return el;
 };
 
-const split = splitText(text);
+const splitText2 = (el) => {
+	el.innerHTML = el.textContent.replace(/(\S*)/g, m => {
+  return `<div class="word2">` +
+			m.replace(/(-|#|@)?\S(-|#|@)?/g, "<div class='letter2'>$&</div>") +
+			`</div>`;
+	});
+	return el;
+};
+
+const splitText3 = (el) => {
+	el.innerHTML = el.textContent.replace(/(\S*)/g, m => {
+  return `<div class="word3">` +
+			m.replace(/(-|#|@)?\S(-|#|@)?/g, "<div class='letter3'>$&</div>") +
+			`</div>`;
+	});
+	return el;
+};
+
+const split1 = splitText1(text1),
+      split2 = splitText2(text2),
+      split3 = splitText3(text3);
 
 function random(min, max){
   return (Math.random() * (max - min)) + min;
 }
 
-Array.from(split.querySelectorAll('.letter')).forEach((el, idx) => {
-	TweenMax.from(el, 2.5, {
+Array.from(split1.querySelectorAll('.letter1')).forEach((el, idx) => {
+	gsap.from(el, 2.5, {
 		opacity: 0,
 		scale: .1,
-		x: random(-500, 500),
-		y: random(-500, 500),
-		z: random(-500, 500),
-		delay: idx * 0.02,
+		x: random(-300, 300),
+		y: random(-300, 300),
+		z: random(-300, 300),
+		delay: idx * 0.01,
 		repeat: 0,
 	})
 });
+
+Array.from(split2.querySelectorAll('.letter2')).forEach((el, idx) => {
+	gsap.from(el, 2.5, {
+		opacity: 0,
+		scale: .1,
+		x: random(-300, 300),
+		y: random(-300, 300),
+		z: random(-300, 300),
+		delay: idx * 0.01,
+		repeat: 0,
+	})
+});
+
+Array.from(split3.querySelectorAll('.letter3')).forEach((el, idx) => {
+	gsap.from(el, 2.5, {
+		opacity: 0,
+		scale: .1,
+		x: random(-300, 300),
+		y: random(-300, 300),
+		z: random(-300, 300),
+		delay: idx * 0.01,
+		repeat: 0,
+	})
+});
+
+
+function animateFrom(elem, direction) {
+  direction = direction || 1;
+  var x = 0,
+      y = direction * 100;
+  if(elem.classList.contains("reveal-in-left")) {
+    x = -100;
+    y = 0;
+  } else if (elem.classList.contains("reveal-in-right")) {
+    x = 100;
+    y = 0;
+  }
+  elem.style.transform = "translate(" + x + "px, " + y + "px)";
+  elem.style.opacity = "0";
+  gsap.fromTo(elem, {x: x, y: y, autoAlpha: 0}, {
+    duration: 1.25,
+    x: 0,
+    y: 0,
+    autoAlpha: 1,
+    ease: "expo",
+    overwrite: "auto"
+  });
+}
+
+function hide(elem) {
+  gsap.set(elem, {autoAlpha: 0});
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray(".reveal-in").forEach(function(elem) {
+    hide(elem); // assure that the element is hidden when scrolled into view
+    ScrollTrigger.create({
+      trigger: elem,
+      onEnter: function() { animateFrom(elem) },
+      onEnterBack: function() { animateFrom(elem, -1) },
+      onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
+    });
+  });
+});
+
+
+// let config = {strength: 1};
+// gsap.set(".hamburger", {xPercent: -50, x: -1});
+// gsap.to(".hamburger", {
+//   repeat: -1,
+//   yoyo: true,
+//   x: 1,
+//   duration: 0.2,
+//   ease: "power1.inOut",
+//   modifiers: {
+//     x: gsap.utils.unitize(value => value * config.strength, "px")
+//   }
+// });
+// gsap.to(config, {
+//   strength: 100,
+//   ease: "none",
+//   scrollTrigger: {
+//     // defaults to using the window as the trigger, starting at the top, ending at the bottom.
+//     scrub: true
+//   }
+// });

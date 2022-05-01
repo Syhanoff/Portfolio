@@ -5,7 +5,7 @@
     display: block;
     width: 60px;
     height: 2px;
-    background-color: $first-accent-color;
+    background-color: var(--color-accent-main);
     top: clamp(35px, 7vw, 53px);
     position: absolute;
   }

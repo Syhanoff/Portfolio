@@ -2,3 +2,33 @@ $primary-color: #1F1E1C;
 $secondary-color: #FFF;
 $first-accent-color: #30A7E2;
 $second-accent-color: #31FFEE;
+
+
+
+.dark-theme {
+	--color-main: #1F1E1C;
+	--color-second: #fff;
+  --color-accent-main: #30A7E2;
+  --color-accent-second: #31FFEE;
+  --color-gray-main: #666666;
+  --color-cursor: #fff;
+  --font-weight: 200;
+  --shadow-btn: -14px -14px 28px #252422, 14px 14px 28px #191816;
+  --shadow-btn-hover: 0 0 5px #31FFEE, 0 0 25px #31FFEE, 0 0 50px #31FFEE;
+  --shadow-cursor: 0 0 22px rgba(255, 255, 255, 0.5);
+  --shadow-cursor-hover: 0 0 15px #31FFEE;
+}
+
+.light-theme {
+	--color-main: #fff;
+	--color-second: #1F1E1C;
+  --color-accent-main: #30A7E2;
+  --color-accent-second: #31FFEE;
+  --color-gray-main: #666666;
+  --color-cursor: #666666;
+  --font-weight: 400;
+  --shadow-btn: -14px -14px 28px #252422, 14px 14px 28px #191816;
+  --shadow-btn-hover: 0 0 5px #31FFEE, 0 0 25px #31FFEE, 0 0 50px #31FFEE;
+  --shadow-cursor: 0 0 22px rgba(102, 102, 102, 0.5);
+  --shadow-cursor-hover: #30A7E2;
+}

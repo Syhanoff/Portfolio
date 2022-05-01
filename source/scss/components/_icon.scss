@@ -3,7 +3,7 @@
     height: 36px;
     border-radius: 100%;
     display: block;
-    background-color: $first-accent-color;
+    background-color: var(--color-accent-main);
     position: relative;
     &__icon {
     position: absolute;

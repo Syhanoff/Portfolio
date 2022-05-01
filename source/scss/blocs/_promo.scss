@@ -1,6 +1,6 @@
 .promo {
   height: 100vh;
-  padding-top: 210px;
+  padding-top: 200px;
 }
 
 .offer {
@@ -26,29 +26,23 @@
       background-color: #1F1E1C;
     }
   }
-  &__img {
-    margin-top: -154px;
-    filter: grayscale(100%);
-    transition: all .6s ease;
-    z-index: 1;
-    position: relative;
-    &:hover {
-      filter: grayscale(0%);
-    }
-		&::before, &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: linear-gradient(45deg, $first-accent-color, $second-accent-color, $secondary-color);
-      // background-size: 400%;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      animation: animated-shadow 20s linear infinite alternate;
-    }
-		&::after {
-			filter: blur(30px);
+  &__text-box {
+    max-width: 170px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__txt {
+    font-size: 18px;
+    font-weight: 200;
+    opacity: 0.5;
+    div {
+      display: inline-block;
+      }
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
   }
 }
@@ -113,4 +107,156 @@
     to {
         transform: translate(0)
     }
+}
+
+.promo__mouse {
+  background: $primary-color linear-gradient(transparent 0%, transparent 50%, #ffffff 50%, #ffffff 100%);
+  position: absolute;
+  left: calc(50% - 13px);
+  // transform: translateX(-50%);
+  bottom: 30px;
+  // top: 50%;
+  width: 26px;
+  height: 44px;
+  border-radius: 100px;
+  background-size: 100% 200%;
+  animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+  }
+  &:before {
+    width: 26px - 5px;
+    height: 44px - 5px;
+    background-color: $primary-color;
+    border-radius: 100px;
+  }
+  &:after {
+    background-color: #ffffff;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    animation: trackBallSlide 5s linear infinite;
+  }
+}
+
+@keyframes colorSlide {
+  0% { background-position: 0% 100%; }
+  20% { background-position: 0% 0%; }
+  21% { background-color: #4e5559; }
+  29.99% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  30% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  50% { background-position: 0% 0%; }
+  51% { background-color: #4e5559; }
+  59% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  60% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  80% { background-position: 0% 0%; }
+  81% { background-color: #4e5559; }
+  90%, 100% { background-color: #ffffff; }
+}
+
+@keyframes trackBallSlide {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(-10px);
+  }
+  6% {
+    opacity: 1;
+    transform: scale(0.9) translateY(10px/2);
+  }
+  14% {
+    opacity: 0;
+    transform: scale(0.4) translateY(10px*2);
+  }
+  15%, 19% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-10px);
+  }
+  28%, 29.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-10px);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) translateY(-10px);
+  }
+  36% {
+    opacity: 1;
+    transform: scale(0.9) translateY(10px/2);
+  }
+  44% {
+    opacity: 0;
+    transform: scale(0.4) translateY(10px*2);
+  }
+  45%, 49% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-10px);
+  }
+  58%, 59.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-10px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1) translateY(-10px);
+  }
+  66% {
+    opacity: 1;
+    transform: scale(0.9) translateY(10px/2);
+  }
+  74% {
+    opacity: 0;
+    transform: scale(0.4) translateY(10px*2);
+  }
+  75%, 79% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-10px);
+  }
+  88%, 100% {
+    opacity: 1;
+    transform: scale(1) translateY(-10px);
+  }
+}
+
+@keyframes nudgeMouse {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(8px); }
+  30% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+  60% { transform: translateY(0); }
+  80% { transform: translateY(8px); }
+  90% { transform: translateY(0); }
+}
+
+@keyframes nudgeText {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(2px); }
+  30% { transform: translateY(0); }
+  50% { transform: translateY(2px); }
+  60% { transform: translateY(0); }
+  80% { transform: translateY(2px); }
+  90% { transform: translateY(0); }
+}
+
+@keyframes colorText {
+  21% { color: #4e5559; }
+  30% { color: #ffffff; }
+  51% { color: #4e5559; }
+  60% { color: #ffffff; }
+  81% { color: #4e5559; }
+  90% { color: #ffffff; }
 }

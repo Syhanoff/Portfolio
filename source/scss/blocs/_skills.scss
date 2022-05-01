@@ -80,7 +80,7 @@
       left: 0;
       position: absolute;
       border-radius: 4px;
-      background: linear-gradient(90deg, #30A7E2 0%, #31FFEE 100%);
+      background: linear-gradient(90deg, $primary-color, $first-accent-color, $second-accent-color, $secondary-color);
     }
   }
 }

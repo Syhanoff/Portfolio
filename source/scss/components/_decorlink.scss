@@ -1,0 +1,23 @@
+.decor-link {
+  cursor: pointer;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 3px;
+  line-height: 24px;
+  &:before {
+    content: '';
+    position: absolute;
+    transition: transform .5s ease;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    height: 2px;
+    background: var(--color-accent-main);
+    transform:  scaleX(0);
+  }
+  &:hover:before {
+    transform:  scaleX(1);
+  }
+}
