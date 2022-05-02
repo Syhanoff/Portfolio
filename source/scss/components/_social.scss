@@ -6,45 +6,53 @@
   top: 50%;
   left: 50px;
   transform: translateY(-50%);
+  &:hover {
+    .social-wrap__dash {
+      height: 120px;
+    }
+    .social-wrap__link:not(:last-child) {
+      margin: 30px 0 0 0;
+    }
+    .social-wrap__text {
+      letter-spacing: 5px;
+    }
+  }
   &__text {
     font-size: 16px;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    margin-top: 30px;
+    transition: var(--transition-base);
   }
   &__dash {
     background-color: #fff;
     width: 2px;
     height: 100px;
-    margin-top: 30px;
+    margin: 30px 0;
+    transition: var(--transition-base);
   }
   &__inner {
     display: flex;
     flex-direction: column-reverse;
     &_menu {
-      // height: 20px;
-      // width: 90px;
       flex-direction: row;
       position: absolute;
       bottom: 50px;
       left: 50%;
       transform: translateX(-50%);
-
-
     }
   }
   &__link {
     transform: rotate(-90deg);
     width: 20px;
     height: 20px;
-    transition: all .6s ease;
+    transition: var(--transition-base);
     &:not(:last-child) {
       margin: 15px 0 0 0;
     }
     &:hover {
       transform: scale(2) rotate(0deg);
       svg path {
-        fill: $second-accent-color
+        fill: var(--color-accent-second);
       }
     }
     &_menu {

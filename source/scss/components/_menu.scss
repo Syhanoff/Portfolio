@@ -7,7 +7,7 @@
   z-index: 1000;
   width: 100vw;
   height: 100vh;
-  transition: all .6s ease;
+  transition: var(--transition-base);
   &.active {
     left: 0;
     visibility: visible;
@@ -83,7 +83,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    transition: all .6s ease;
+    transition: var(--transition-base);
     &:hover {
       transform: scale(1.5) rotate(360deg);
     }

@@ -5,6 +5,13 @@
   cursor: pointer;
   width: 40px;
   height: 40px;
+display: flex;
+justify-content: center;
+  &:hover {
+    .burger__line-top {
+        width: 20px;
+      }
+    }
   &__line {
     backface-visibility: hidden;
     position: absolute;
@@ -18,7 +25,7 @@
         backface-visibility: hidden;
         top: calc(50% - 2px);
         transform: rotate(222deg) translate(0px, 0px);
-        transition: 0.55s 0.5s;
+        transition: .5s .5s;
       }
     }
     &-middle {
@@ -33,7 +40,7 @@
         backface-visibility: hidden;
         top: calc(50% - 2px);
         transform: rotate(-222deg) translate(0px, 0px);
-        transition: 0.55s 0.5s;
+        transition: .5s .5s;
       }
     }
   }
