@@ -20,11 +20,13 @@
   &__text {
     font-size: 16px;
     writing-mode: vertical-lr;
+    font-weight: 400;
+    color: var(--color-gray-main);
     transform: rotate(180deg);
     transition: var(--transition-base);
   }
   &__dash {
-    background-color: #fff;
+    background-color: var(--color-gray-main);
     width: 2px;
     height: 100px;
     margin: 30px 0;
@@ -48,6 +50,9 @@
     transition: var(--transition-base);
     &:not(:last-child) {
       margin: 15px 0 0 0;
+    }
+    svg path {
+      fill: var(--color-gray-main);
     }
     &:hover {
       transform: scale(2) rotate(0deg);

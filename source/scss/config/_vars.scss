@@ -21,6 +21,9 @@ $second-accent-color: #31FFEE;
   --shadow-btn-hover: 0 0 5px #31FFEE, 0 0 25px #31FFEE, 0 0 50px #31FFEE;
   --shadow-cursor: 0 0 22px rgba(255, 255, 255, 0.5);
   --shadow-cursor-hover: 0 0 15px #31FFEE;
+  --gradient-menu: linear-gradient(180deg, var(--color-accent-second), var(--color-accent-main), var(--color-main));
+  --gradient-indicator: linear-gradient(90deg, var(--color-main), var(--color-accent-main), var(--color-accent-second), var(--color-second));
+  --background-skill:  rgba(49, 255, 238, 10%);
 }
 
 .light-theme {
@@ -35,4 +38,7 @@ $second-accent-color: #31FFEE;
   --shadow-btn-hover: 0 0 5px #31FFEE, 0 0 25px #31FFEE, 0 0 50px #31FFEE;
   --shadow-cursor: 0 0 22px rgba(102, 102, 102, 0.5);
   --shadow-cursor-hover: #30A7E2;
+  --gradient-menu: linear-gradient(180deg, var(--color-accent-second), var(--color-accent-main), var(--color-main));
+  --gradient-indicator: linear-gradient(90deg, var(--color-main), var(--color-accent-main), var(--color-accent-second), var(--color-second));
+  --background-skill:  rgba(49, 255, 238, 10%);
 }

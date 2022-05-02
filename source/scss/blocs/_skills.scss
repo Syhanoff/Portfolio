@@ -9,12 +9,12 @@
     grid-auto-rows: 270px;
   }
   &__inner {
-    transition: all .6s ease;
+    transition: var(--transition-base);
     position: relative;
     perspective: 540px;
-    border: 1px solid $second-accent-color;
+    border: 1px solid var(--color-accent-second);
     &:hover {
-      border: 1px solid $primary-color;
+      border: 1px solid var(--color-main);
     }
     &-back {
       width: 100%;
@@ -35,7 +35,7 @@
     height: 100%;
     padding: 20px 20px 10px 20px;
     z-index: 50;
-    background-color: rgba(49, 255, 238, 10%);
+    background-color: var(--background-skill);
   }
   &__subtitle {
     margin-top: 10px;
@@ -68,7 +68,7 @@
     &-scale {
     height: 14px;
     width: 100%;
-    background-color: #E8E4DE;
+    background-color: var(--color-gray-main);
     border-radius: 4px;
     position: relative;
     }
@@ -80,47 +80,42 @@
       left: 0;
       position: absolute;
       border-radius: 4px;
-      background: linear-gradient(90deg, $primary-color, $first-accent-color, $second-accent-color, $secondary-color);
+      background: var(--gradient-indicator);
     }
   }
 }
 
-
-$duration: 600ms;
-$timing-fn: ease;
-
 .in-top .skills__icon {
   transform-origin: 50% 0%;
-  animation: in-top $duration $timing-fn 0ms 1 forwards;
+  animation: in-top 600ms ease 0ms 1 forwards;
 }
 .in-right .skills__icon {
   transform-origin: 100% 0%;
-  animation: in-right $duration $timing-fn 0ms 1 forwards;
+  animation: in-right 600ms ease 0ms 1 forwards;
 }
 .in-bottom .skills__icon {
   transform-origin: 50% 100%;
-  animation: in-bottom $duration $timing-fn 0ms 1 forwards;
+  animation: in-bottom 600ms ease 0ms 1 forwards;
 }
 .in-left .skills__icon {
   transform-origin: 0% 0%;
-  animation: in-left $duration $timing-fn 0ms 1 forwards;
+  animation: in-left 600ms ease 0ms 1 forwards;
 }
-
 .out-top .skills__icon {
   transform-origin: 50% 0%;
-  animation: out-top $duration $timing-fn 0ms 1 forwards;
+  animation: out-top 600ms ease 0ms 1 forwards;
 }
 .out-right .skills__icon {
   transform-origin: 100% 50%;
-  animation: out-right $duration $timing-fn 0ms 1 forwards;
+  animation: out-right 600ms ease 0ms 1 forwards;
 }
 .out-bottom .skills__icon {
   transform-origin: 50% 100%;
-  animation: out-bottom $duration $timing-fn 0ms 1 forwards;
+  animation: out-bottom 600ms ease 0ms 1 forwards;
 }
 .out-left .skills__icon {
   transform-origin: 0% 0%;
-  animation: out-left $duration $timing-fn 0ms 1 forwards;
+  animation: out-left 600ms ease 0ms 1 forwards;
 }
 
 @keyframes in-top {
@@ -135,7 +130,6 @@ $timing-fn: ease;
 @keyframes in-left {
   from {transform: rotate3d(0,1,0, 90deg)}
   to   {transform: rotate3d(0,0,0, 0deg)}}
-
 @keyframes out-top {
   from {transform: rotate3d(0,0,0, 0deg)}
   to   {transform: rotate3d(-1,0,0, 104deg)}}
