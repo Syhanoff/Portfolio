@@ -20,7 +20,7 @@
       transform: translateY(-50%);
       width: 15px;
       height: 15px;
-      background-color: $first-accent-color;
+      background-color: var(--color-accent-main);
       display: block;
       border-radius: 100%;
     }
@@ -36,7 +36,7 @@
       width: 1px;
       height: calc(100% + 5px);
       display: block;
-      background-color: $secondary-color;
+      background-color: var(--color-second);
     }
   }
   &__inner {
@@ -50,7 +50,7 @@
       display: block;
       left: -43px;
       top: 18px;
-      background-color: $secondary-color;
+      background-color: var(--color-second);
     }
   }
   &__desc {

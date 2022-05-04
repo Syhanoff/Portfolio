@@ -149,18 +149,3 @@
     animation: slit-in-vertical 0.45s ease-out both;
   }
 }
-
-@keyframes slit-in-vertical {
-  0% {
-    transform: translateZ(0) rotateY(90deg);
-    opacity: 0;
-  }
-  54% {
-    transform: translateZ(-25%) rotateY(87deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateZ(-50%) rotateY(0);
-  }
-}
-
