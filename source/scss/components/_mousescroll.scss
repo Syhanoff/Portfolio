@@ -1,0 +1,30 @@
+.promo__mouse {
+  background: var(--color-main) linear-gradient(transparent 0%, transparent 50%, var(--color-second) 50%, var(--color-second) 100%);
+  position: absolute;
+  left: calc(50% - 13px);
+  bottom: 50px;
+  width: 25px;
+  height: 45px;
+  border-radius: 100px;
+  background-size: 100% 200%;
+  animation: colorMove 5s linear infinite, mouseMove 5s ease-out infinite;
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+  }
+  &:before {
+    width: 25px - 4px;
+    height: 45px - 4px;
+    background-color: var(--color-main);
+    border-radius: 100px;
+  }
+  &:after {
+    background-color: var(--color-second);
+    width: 5px;
+    height: 10px;
+    border-radius: 100%;
+    animation: trackballMove 5s linear infinite;
+  }
+}

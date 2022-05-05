@@ -17,6 +17,7 @@ import './modules/cookies';
 // import './modules/counter';
 import './modules/gsap';
 import './modules/theme';
+import './modules/buttonup';
 
 
 
