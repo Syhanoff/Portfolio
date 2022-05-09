@@ -1,6 +1,10 @@
 .promo {
-  height: 100vh;
-  padding: 200px 0;
+  &__alignment {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .offer {
