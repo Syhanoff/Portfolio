@@ -1,11 +1,17 @@
 .contact {
   padding-top: clamp(40px, 7vw, 120px);
-  padding-bottom: clamp(20px, 7vw, 60px);
+  // padding-bottom: clamp(20px, 7vw, 60px);
+  padding-bottom: clamp(20px, 7vw, 100px);
+  background: url('@img/bg2_1920x820.jpg') no-repeat center top / cover;
+
   &__wrapper {
     display: grid;
-    grid-template-columns: 400px auto;
-    grid-template-rows: 600px;
-    column-gap: 80px;
+    // grid-template-columns: 400px auto;
+    // grid-template-rows: 600px;
+    grid-template: auto / 70%;
+    // column-gap: 80px;
+    row-gap: 40px;
+    justify-content: center;
   }
   &__content {
     padding-top: 7px;
@@ -27,7 +33,7 @@
   &__link {
     margin-right: 15px;
     svg path {
-      fill: var(--color-gray-main);
+      fill: var(--color-icon-link);
       transition: var(--transition-base);
     }
     &:hover {
@@ -45,7 +51,8 @@
     input, textarea {
       width: 100%;
       height: 100%;
-      background-color: var(--color-main);
+      // background-color: var(--color-main);
+      background-color: transparent;
       border: 1px solid var(--color-second);
       padding: 0 20px 0 20px;
       color: var(--color-second);
@@ -60,6 +67,7 @@
       top: -10px;
       left: 12px;
       background-color: var(--color-main);
+      // background-color: transparent;
     }
   }
   &__form-name {
@@ -89,6 +97,7 @@
     display: flex;
     label {
       position: static;
+      background-color: transparent;
     }
     input {
       margin-right: 10px;

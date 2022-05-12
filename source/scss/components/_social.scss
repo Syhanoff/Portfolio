@@ -21,7 +21,7 @@
     font-size: 16px;
     writing-mode: vertical-lr;
     font-weight: 400;
-    color: var(--color-gray-main);
+    color: var(--color-icon-link);
     transform: rotate(180deg);
     transition: var(--transition-base);
   }
@@ -52,7 +52,7 @@
       margin: 15px 0 0 0;
     }
     svg path {
-      fill: var(--color-gray-main);
+      fill: var(--color-icon-link);
     }
     &:hover {
       transform: scale(2) rotate(0deg);
