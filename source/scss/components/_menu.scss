@@ -37,7 +37,7 @@
     a {
       cursor: pointer;
       position: relative;
-      color: var(--color-second);
+      color: var(--color-background-text);
       text-decoration: none;
       padding: 10px;
       display: inline-block;
@@ -49,7 +49,7 @@
         left: 0;
         width: 100%;
         height: 1px;
-        background: var(--color-second);
+        background: var(--color-background-text);
       }
       &:before {
         bottom: 0;
@@ -77,7 +77,7 @@
   &__close {
     background-color: transparent;
     display: block;
-    color: var(--color-second);
+    color: var(--color-background-text);
     font-size: 50px;
     line-height: 25px;
     position: absolute;

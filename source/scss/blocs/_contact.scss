@@ -1,15 +1,11 @@
 .contact {
   padding-top: clamp(40px, 7vw, 120px);
-  // padding-bottom: clamp(20px, 7vw, 60px);
   padding-bottom: clamp(20px, 7vw, 100px);
   background: url('@img/bg2_1920x820.jpg') no-repeat center top / cover;
-
+  color: var(--color-background-text);
   &__wrapper {
     display: grid;
-    // grid-template-columns: 400px auto;
-    // grid-template-rows: 600px;
     grid-template: auto / 70%;
-    // column-gap: 80px;
     row-gap: 40px;
     justify-content: center;
   }
@@ -18,13 +14,16 @@
   }
   &__title {
     text-align: left;
+    color: var(--color-background-text);
   }
   &__subtitle {
     &-social {
       margin-top: clamp(30px, 5vw, 60px);
+      color: var(--color-background-text);
     }
     &-form {
       margin-top: 30px;
+      color: var(--color-background-text);
     }
   }
   &__social {
@@ -33,7 +32,7 @@
   &__link {
     margin-right: 15px;
     svg path {
-      fill: var(--color-icon-link);
+      fill: var(--color-background-text);
       transition: var(--transition-base);
     }
     &:hover {
@@ -51,9 +50,8 @@
     input, textarea {
       width: 100%;
       height: 100%;
-      // background-color: var(--color-main);
       background-color: transparent;
-      border: 1px solid var(--color-second);
+      border: 1px solid var(--color-background-text);
       padding: 0 20px 0 20px;
       color: var(--color-second);
       resize: none;
@@ -66,15 +64,19 @@
       padding: 0 10px;
       top: -10px;
       left: 12px;
-      background-color: var(--color-main);
-      // background-color: transparent;
     }
   }
   &__form-name {
     position: relative;
+    label {
+      background-color: #181E14;
+    }
   }
   &__form-email {
     position: relative;
+    label {
+      background-color: #0A090D;
+    }
   }
   &__form-text {
     grid-row: 2 / 3;
@@ -82,6 +84,9 @@
     position: relative;
     textarea {
       padding: 20px;
+    }
+    label {
+      background-color: #181E14;
     }
   }
   &__form-send {
@@ -98,6 +103,10 @@
     label {
       position: static;
       background-color: transparent;
+
+      a {
+        color: var(--color-background-text);
+      }
     }
     input {
       margin-right: 10px;

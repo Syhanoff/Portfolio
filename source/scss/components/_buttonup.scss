@@ -6,6 +6,7 @@
   width: 40px;
   height: 40px;
   z-index: 9999;
+  display: none;
 }
 
 #circleEmpty {
@@ -13,7 +14,7 @@
 }
 
 #circleFill {
-  stroke: var(--color-second);
+  stroke: var(--color-accent-main);
 }
 
 .up-arrow {
@@ -27,6 +28,10 @@
   transition: var(--transition-base);
   &:hover {
     transform: scale(1.3);
-    color: var(--color-second);
+    color: var(--color-accent-main);
   }
+}
+
+.buttonup.active {
+  display: block;
 }

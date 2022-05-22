@@ -1,7 +1,7 @@
 .btn {
   background: var(--color-accent-main);
   box-shadow: var(--shadow-btn);
-  color: var(--color-second);
+  color: var(--color-background-text);
   font-weight: 400;
   display: block;
   text-align: center;
@@ -13,7 +13,7 @@
     background: var(--color-accent-second);
     color: var(--color-main);
     box-shadow: var(--shadow-btn-hover);
-    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    -webkit-box-reflect: var(--reflect);
   }
   &:active {
     background: var(--color-accent-main);

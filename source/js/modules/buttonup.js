@@ -1,4 +1,5 @@
 const circle = document.getElementById('circleFill');
+const activeBtn = document.querySelector('.buttonup');
 
 const progressAnimation = () => {
   let scrollTop = window.scrollY;
@@ -16,4 +17,9 @@ progressAnimation();
 
 window.addEventListener('scroll', () => {
   progressAnimation();
+  if (window.pageYOffset > 580) {
+    activeBtn.style.display = 'block'
+  } else {
+    activeBtn.style.display = 'none'
+  }
 });
