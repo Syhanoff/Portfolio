@@ -1,6 +1,6 @@
 .price {
   padding-top: clamp(40px, 7vw, 120px);
-  padding-bottom: clamp(20px, 7vw, 120px);
+  padding-bottom: clamp(60px, 7vw, 120px);
   &__label.decorline {
     &::after {
       top: 38px;
@@ -8,7 +8,7 @@
   }
   &__wrapper {
     padding: 0 100px;
-    margin-top: clamp(30px, 5vw, 60px);
+    margin-top: clamp(50px, 5vw, 60px);
     display: grid;
     grid-template-columns: 400px 400px;
     justify-content: space-between;
