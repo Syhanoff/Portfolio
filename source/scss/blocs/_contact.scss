@@ -1,7 +1,8 @@
 .contact {
-  padding-top: clamp(40px, 7vw, 120px);
-  padding-bottom: clamp(20px, 7vw, 100px);
-  background: url('@img/bg2_1920x820.jpg') no-repeat center top / cover;
+  padding-top: clamp(60px, 7vw, 120px);
+  padding-bottom: clamp(60px, 7vw, 120px);
+  @include image-set ('@img/bg2_1920x820');
+  @include bg-cover;
   color: var(--color-background-text);
   &__wrapper {
     display: grid;
@@ -59,10 +60,10 @@
       background-color: transparent;
       border: 1px solid var(--color-background-text);
       padding: 13px 20px 13px 20px;
-      color: var(--color-second);
+      color: var(--color-background-text);
       resize: none;
       &::placeholder {
-        color: var(--color-gray-main);
+        color: var(--color-gray-second);
       }
     }
     label {

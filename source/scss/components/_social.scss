@@ -6,6 +6,7 @@
   top: 50%;
   left: 50px;
   transform: translateY(-50%);
+  z-index: 999;
   &:hover {
     .social-wrap__dash {
       height: 120px;

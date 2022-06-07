@@ -5,6 +5,7 @@
     display: block;
     background-color: var(--color-accent-main);
     position: relative;
+    transition: var(--transition-base);
     &__icon {
     position: absolute;
     top: 50%;

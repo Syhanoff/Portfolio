@@ -108,34 +108,12 @@ document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.utils.toArray(".reveal-in").forEach(function(elem) {
-    hide(elem); // assure that the element is hidden when scrolled into view
+    hide(elem);
     ScrollTrigger.create({
       trigger: elem,
       onEnter: function() { animateFrom(elem) },
       onEnterBack: function() { animateFrom(elem, -1) },
-      onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
+      onLeave: function() { hide(elem) }
     });
   });
 });
-
-
-// let config = {strength: 1};
-// gsap.set(".hamburger", {xPercent: -50, x: -1});
-// gsap.to(".hamburger", {
-//   repeat: -1,
-//   yoyo: true,
-//   x: 1,
-//   duration: 0.2,
-//   ease: "power1.inOut",
-//   modifiers: {
-//     x: gsap.utils.unitize(value => value * config.strength, "px")
-//   }
-// });
-// gsap.to(config, {
-//   strength: 100,
-//   ease: "none",
-//   scrollTrigger: {
-//     // defaults to using the window as the trigger, starting at the top, ending at the bottom.
-//     scrub: true
-//   }
-// });

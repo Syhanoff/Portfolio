@@ -1,5 +1,6 @@
 .resume {
-  padding-top: clamp(40px, 7vw, 120px);
+  padding-top: clamp(60px, 7vw, 120px);
+  padding-bottom: clamp(60px, 7vw, 120px);
   &__box {
     display: grid;
     grid-template-columns: repeat(2, 400px);
@@ -38,6 +39,12 @@
       display: block;
       background-color: var(--color-second);
     }
+    &:hover {
+      .background-box {
+        background-color: var(--color-accent-second);
+        box-shadow: var(--shadow-btn-hover);
+      }
+    }
   }
   &__inner {
     display: flex;
@@ -58,6 +65,9 @@
   }
   &__txt {
     margin-top: 11px;
+  }
+  &__btn {
+    display: none;
   }
 }
 .resume-item {

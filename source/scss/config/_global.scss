@@ -30,6 +30,7 @@ body {
   font-family: 'SourceSansPro', sans-serif;
   color: var(--color-second);
   background-color: var(--color-main);
+  position: relative;
 }
 
 ul li {
@@ -67,7 +68,7 @@ input, button, textarea {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-text-fill-color: var(--color-second);
+  -webkit-text-fill-color: var(--color-background-text);
   transition: background-color 5000s ease-in-out 0s;
 }
 

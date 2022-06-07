@@ -5,6 +5,7 @@
   cursor: pointer;
   width: 40px;
   height: 40px;
+  z-index: 999;
   &__line {
     backface-visibility: hidden;
     position: absolute;

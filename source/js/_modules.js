@@ -1,23 +1,29 @@
-// Пример
-// import './modules/slider';
-
+import './modules/adaptive-height';
 import './modules/burger';
-import './modules/skillsline';
-import './modules/mouse';
-import './modules/card';
-import './modules/parallax';
-import './modules/modal';
-import './modules/video';
-import './modules/swiper';
-import './modules/slider';
-import './modules/validate';
-import './modules/smooth-scroll';
-import './modules/cookies';
-// import './modules/liquid-foto';
-// import './modules/counter';
-import './modules/gsap';
-import './modules/theme';
 import './modules/buttonup';
+import './modules/card';
+import './modules/cookies';
+import './modules/gsap';
+import './modules/modal';
+import './modules/mouse';
+// import './modules/parallax';
+import './modules/skillsline';
+import './modules/slider';
+import './modules/smooth-scroll';
+import './modules/swiper';
+import './modules/theme';
+import './modules/validate';
+import './modules/video';
+
+
+
+
+
+
+
+
+
+
 
 
 

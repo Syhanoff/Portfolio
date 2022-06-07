@@ -1,7 +1,8 @@
 .about {
-  padding-top: clamp(40px, 7vw, 120px);
-  padding-bottom: clamp(40px, 7vw, 120px);
-  background: url('@img/bg1_1920x840.jpg') no-repeat center top / cover;
+  padding-top: clamp(60px, 7vw, 120px);
+  padding-bottom: clamp(60px, 7vw, 120px);
+  @include image-set ('@img/bg1_1920x840');
+  @include bg-cover;
   color: var(--color-background-text);
   &__wrapper {
     display: grid;
@@ -29,6 +30,7 @@
 }
 .skill-item {
   display: flex;
+  transition: var(--transition-base);
   &__content {
     width: 100%;
     margin-left: 25px;
@@ -39,6 +41,12 @@
   &__background-box {
     path {
       fill: var(--color-background-text);
+    }
+  }
+  &:hover {
+    .background-box {
+      background-color: var(--color-accent-second);
+      box-shadow: var(--shadow-btn-hover);
     }
   }
 }

@@ -19,8 +19,6 @@ function toggleTheme() {
 
 setTheme('dark-theme');
 
-
-
 document.querySelector('.theme').addEventListener('click', (e) => {
   toggleTheme();
   themeLight.classList.toggle('active');

@@ -6,7 +6,7 @@
   opacity: 0;
   z-index: 1000;
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh) * 100);
   transition: var(--transition-base);
   &.active {
     left: 20px;

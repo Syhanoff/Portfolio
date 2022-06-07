@@ -1,5 +1,6 @@
 .footer {
-  padding: 60px 0 30px;
+  padding-top: clamp(30px, 7vw, 60px);
+  padding-bottom: clamp(30px, 7vw, 60px);
   font-size: 12px;
   &__box {
     display: flex;

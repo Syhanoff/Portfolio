@@ -11,6 +11,9 @@
   --color-accent-main: #30A7E2;
   --color-accent-second: #31FFEE;
   --color-gray-main: #e8e8e8;
+  --color-gray-second: #666666;
+
+  --color-overlay: rgba(31, 30, 28, .4);
 
   --reflect: below 1px linear-gradient(transparent, #0005);
 
@@ -22,7 +25,7 @@
 
   --shadow-modal: 0px 100px 80px rgba(232, 232, 232, 0.07), 0px 41.7776px 33.4221px rgba(232, 232, 232, 0.0503198), 0px 22.3363px 17.869px rgba(232, 232, 232, 0.0417275), 0px 12.5216px 10.0172px rgba(232, 232, 232, 0.035), 0px 6.6501px 5.32008px rgba(232, 232, 232, 0.0282725), 0px 2.76726px 2.21381px rgba(232, 232, 232, 0.0196802);
 
-  --font-weight: 200;
+  --font-weight: 400;
 
   // --shadow-btn: -14px -14px 28px #252422, 14px 14px 28px #191816;
   --shadow-btn: none;
@@ -42,8 +45,11 @@
   --color-accent-main: #f84822;
   --color-accent-second: #e80707;
   --color-gray-main: #666666;
+  --color-gray-second: #666666;
   --reflect: none;
   --color-icon-link: #666666;
+
+  --color-overlay: rgba(232, 232, 232, .4);
 
   --color-cursor: rgba(248, 72, 34, .5);
   --shadow-cursor: 0 0 22px rgba(248, 72, 34, 1);
