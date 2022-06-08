@@ -7,10 +7,11 @@
     right: 0;
     bottom: 0;
     background-color: var(--color-overlay);
-    z-index: 99;
+    z-index: 109;
     overflow-y: auto;
     overflow-x: hidden;
     cursor: pointer;
+    // transition: var(--transition-base);
   }
   &__close {
     background-color: transparent;
@@ -39,6 +40,7 @@
     box-shadow: var(--shadow-modal);
     z-index: 110;
     cursor: default;
+    // transition: var(--transition-base);
     &-certificate {
       display: none;
       background: var(--color-main);
@@ -190,5 +192,7 @@
   .active {
     display: block;
     animation: slit-in-vertical 0.45s ease-out both;
+    // animation: unset;
+    // transition: var(--transition-base);
   }
 }
