@@ -38,10 +38,6 @@
     transform: translate(-50%, 0);
     box-shadow: var(--shadow-modal);
     z-index: 110;
-    // overflow-y: auto;
-    // width: 540px;
-    // max-width: 100%;
-    // height: auto;
     cursor: default;
     &-certificate {
       display: none;
@@ -55,7 +51,6 @@
     }
   }
   &__img {
-    // max-width: 600px;
     width: 100%;
     height: auto;
     margin-top: 30px;
@@ -65,10 +60,13 @@
   }
   &__video {
     margin: 0 auto;
+    width: 100%;
+    height: auto;
   }
   &__video-box {
     position: relative;
     display: flex;
+    margin-top: 30px;
   }
   &__video-play {
     position: absolute;
@@ -105,9 +103,15 @@
   &__cool-swiper, &__apair-swiper, &__journal-swiper {
     max-width: 600px;
     width: 100%;
+    margin-top: 30px;
   }
   &__slider-variants {
     position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 30px;
   }
   &__img-varia1 {
     position: absolute;
@@ -115,10 +119,11 @@
     top: 0;
     z-index: 5;
     width: 50%;
+    height: auto;
     overflow: hidden;
     img {
-      max-width: unset;
-      width: 600px;
+      max-width: 600px;
+      height: auto;
     }
   }
   &__slider-runner {
@@ -141,9 +146,6 @@
       transform: translate(-50%, -50%);
     }
   }
-  &__inner {
-    // margin-top: 30px;
-  }
   &__title {
     text-align: left;
   }
@@ -155,18 +157,18 @@
   }
   &__desc {
     margin-top: 20px;
-    // max-width: 400px;
     width: 100%;
   }
   &__links {
     margin-top: 20px;
     display: flex;
-    // max-width: 320px;
     width: 100%;
-    justify-content: space-between;
     flex-wrap: wrap;
     &-subtitle {
       margin-bottom: 10px;
+    }
+    &-inner:not(:last-child) {
+      margin-right: 20px;
     }
   }
   &__link {
@@ -174,6 +176,7 @@
     transition: var(--transition-base);
     width: 20px;
     height: 20px;
+    display: inline-block;
     svg path {
       fill: var(--color-icon-link);
     }

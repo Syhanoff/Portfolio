@@ -1,6 +1,7 @@
 const modalButtons = document.querySelectorAll('.portfolio__link'),
       modalButtonsCertificate = document.querySelectorAll('.resume__btn'),
       overlay      = document.querySelector('.modal__overlay'),
+      // modalWrap    = document.querySelector('.modal__wrapper'),
       closeButtons = document.querySelectorAll('.modal__close');
 
 modalButtons.forEach(function(item){
@@ -31,12 +32,18 @@ closeButtons.forEach(function(item){
   });
 });
 
-overlay.addEventListener('click', function() {
-  document.querySelector('.modal__wrapper.active').classList.remove('active');
-  this.classList.remove('active');
-});
+// overlay.addEventListener('click', function() {
+//   document.querySelector('.modal__wrapper.active').classList.remove('active');
+//   this.classList.remove('active');
+// });
 
 overlay.addEventListener('click', function() {
   document.querySelector('.modal__wrapper-certificate.active').classList.remove('active');
   this.classList.remove('active');
 });
+
+// for(let overlay of modalWrap.children) {
+// 	overlay.addEventListener('click', event=> {
+// 		event.stopPropagation();
+// 	})
+// }
