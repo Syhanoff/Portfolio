@@ -1,6 +1,5 @@
 .resume {
-  padding-top: clamp(60px, 7vw, 120px);
-  padding-bottom: clamp(60px, 7vw, 120px);
+  padding: clamp(60px, 7vw, 120px) 0;
   &__box {
     display: grid;
     grid-template-columns: repeat(2, 400px);
@@ -21,7 +20,7 @@
       transform: translateY(-50%);
       width: 15px;
       height: 15px;
-      background-color: var(--color-accent-main);
+      background: var(--color-accent-main);
       display: block;
       border-radius: 100%;
     }
@@ -37,11 +36,11 @@
       width: 1px;
       height: calc(100% + 5px);
       display: block;
-      background-color: var(--color-second);
+      background: var(--color-second);
     }
     &:hover {
       .background-box {
-        background-color: var(--color-accent-second);
+        background: var(--color-accent-second);
         box-shadow: var(--shadow-btn-hover);
       }
     }
@@ -57,7 +56,7 @@
       display: block;
       left: -43px;
       top: 18px;
-      background-color: var(--color-second);
+      background: var(--color-second);
     }
   }
   &__desc {

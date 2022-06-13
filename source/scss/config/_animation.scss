@@ -7,38 +7,34 @@
     background-position: 0% 0%;
   }
   21% {
-    background-color: var(--color-gray-main);
+    background: var(--color-gray-main);
   }
   29.99% {
-    background-color: var(--color-second);
-    background-position: 0% 0%;
+    background: var(--color-second) 0% 0%;
   }
   30% {
-    background-color: var(--color-gray-main);
-    background-position: 0% 100%;
+    background: var(--color-gray-main) 0% 100%;
   }
   50% {
     background-position: 0% 0%;
   }
   51% {
-    background-color: var(--color-gray-main);
+    background: var(--color-gray-main);
   }
   59% {
-    background-color: var(--color-second);
-    background-position: 0% 0%;
+    background: var(--color-second) 0% 0%;
   }
   60% {
-    background-color: var(--color-gray-main);
-    background-position: 0% 100%;
+    background: var(--color-gray-main) 0% 100%;
   }
   80% {
     background-position: 0% 0%;
   }
   81% {
-    background-color: var(--color-gray-main);
+    background: var(--color-gray-main);
   }
   90%, 100% {
-    background-color: var(--color-second);
+    background: var(--color-second);
   }
 }
 

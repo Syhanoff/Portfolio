@@ -1,6 +1,5 @@
 .price {
-  padding-top: clamp(60px, 7vw, 120px);
-  padding-bottom: clamp(60px, 7vw, 120px);
+  padding: clamp(60px, 7vw, 120px) 0;
   &__label.decorline {
     &::after {
       top: 38px;
@@ -36,14 +35,14 @@
       width: 15px;
       height: 15px;
       border-radius: 100%;
-      background-color: var(--color-accent-main);
+      background: var(--color-accent-main);
       transition: var(--transition-base);
     }
   }
   &__inner {
     &:hover {
       .price__item::before {
-        background-color: var(--color-accent-second);
+        background: var(--color-accent-second);
         box-shadow: var(--shadow-btn-hover);
       }
     }

@@ -17,11 +17,11 @@
   &:before {
     width: 25px - 4px;
     height: 45px - 4px;
-    background-color: var(--color-main);
+    background: var(--color-main);
     border-radius: 100px;
   }
   &:after {
-    background-color: var(--color-second);
+    background: var(--color-second);
     width: 5px;
     height: 10px;
     border-radius: 100%;

@@ -28,14 +28,13 @@
       margin-right: 40px;
     }
     &_notactive {
-      background-color: var(--color-main);
+      background: var(--color-main);
       color: var(--color-second);
     }
   }
   &__text-box {
     max-width: 170px;
     width: 100%;
-    // margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,15 +51,3 @@
     }
   }
 }
-
-// @keyframes animated-shadow {
-// 	from {
-// 		background-position: 0 0;
-//   }
-// 	50% {
-// 		background-position: 100% 0;
-//   }
-// 	to {
-// 		background-position: 0 0;
-//   }
-// }

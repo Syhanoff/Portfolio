@@ -1,12 +1,6 @@
 html {
   box-sizing: border-box;
-  // scroll-snap-type: y mandatory;
 }
-
-// section {
-//   scroll-snap-align: start;
-//   scroll-snap-stop: always;
-// }
 
 *,
 *::before,
@@ -29,7 +23,7 @@ body {
   line-height: 1.4;
   font-family: 'SourceSansPro', sans-serif;
   color: var(--color-second);
-  background-color: var(--color-main);
+  background: var(--color-main);
   position: relative;
 }
 

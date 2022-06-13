@@ -1,6 +1,5 @@
 .contact {
-  padding-top: clamp(60px, 7vw, 120px);
-  padding-bottom: clamp(60px, 7vw, 120px);
+  padding: clamp(60px, 7vw, 120px) 0;
   @include image-set ('@img/bg2_1920x820');
   @include bg-cover;
   color: var(--color-background-text);
@@ -51,13 +50,12 @@
   &__form {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: minmax(300px, auto) minmax(340px, auto);
-    grid-template-rows: auto 180px auto;
+    grid-template: auto 180px auto / minmax(300px, auto) minmax(340px, auto);
     gap: 20px;
     input, textarea {
       width: 100%;
       height: 100%;
-      background-color: transparent;
+      background: transparent;
       border: 1px solid var(--color-background-text);
       padding: 13px 20px 13px 20px;
       color: var(--color-background-text);
@@ -76,13 +74,13 @@
   &__form-name {
     position: relative;
     label {
-      background-color: #181E14;
+      background: #181E14;
     }
   }
   &__form-email {
     position: relative;
     label {
-      background-color: #0A090D;
+      background: #0A090D;
     }
   }
   &__form-text {
@@ -90,7 +88,7 @@
     grid-column: 1 / 3;
     position: relative;
     label {
-      background-color: #181E14;
+      background: #181E14;
     }
   }
   &__form-send {
@@ -104,7 +102,7 @@
     display: flex;
     label {
       position: static;
-      background-color: transparent;
+      background: transparent;
       a {
         color: var(--color-background-text);
       }
@@ -113,14 +111,17 @@
       margin-right: 10px;
       width: 15px;
       height: 15px;
-      border-color: var(--color-gray-main);
       padding: 0;
       appearance: none;
       cursor: pointer;
       transition: var(--transition-base);
       &:checked {
-        background-color: var(--color-accent-main);
+        background: var(--color-accent-main);
       }
     }
   }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }

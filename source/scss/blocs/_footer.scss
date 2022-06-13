@@ -1,6 +1,5 @@
 .footer {
-  padding-top: clamp(30px, 7vw, 60px);
-  padding-bottom: clamp(30px, 7vw, 60px);
+  padding: clamp(30px, 7vw, 60px) 0;
   font-size: 12px;
   &__box {
     display: flex;
@@ -8,5 +7,9 @@
   }
   &__policy {
     text-align: right;
+    &-google {
+      margin-top: -5px;
+      line-height: 1;
+    }
   }
 }

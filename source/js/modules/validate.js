@@ -1,5 +1,6 @@
-const modalСonfirm = document.querySelector('.modal__wrapper[data-modal="mail"]');
-const modalСonfirmСlose = document.querySelector('.modal__btn');
+const modalСonfirm = document.querySelector('.modal__wrapper[data-modal="mail"]'),
+      modalСonfirmСlose = document.querySelector('.modal__btn'),
+      overlayСonfirm      = document.querySelector('.modal__overlay');
 
 import JustValidate from 'just-validate';
 const validation = new JustValidate('#form',
@@ -82,6 +83,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
               if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                   console.log('Отправлено');
+                  overlayСonfirm.classList.add('active');
                   modalСonfirm.classList.add('active');
                 }
               }
@@ -100,4 +102,5 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
 modalСonfirmСlose.addEventListener('click', function() {
   modalСonfirm.classList.remove('active');
+  overlayСonfirm.classList.remove('active');
 });

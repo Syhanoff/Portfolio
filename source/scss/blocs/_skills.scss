@@ -1,6 +1,5 @@
 .skills {
-  padding-top: clamp(60px, 7vw, 120px);
-  padding-bottom: clamp(60px, 7vw, 120px);
+  padding: clamp(60px, 7vw, 120px) 0;
   &__wrapper {
     margin-top: clamp(30px, 5vw, 50px);
     display: grid;
@@ -37,7 +36,7 @@
     height: 100%;
     padding: 20px 20px 10px 20px;
     z-index: 50;
-    background-color: var(--background-skill);
+    background: var(--background-skill);
   }
   &__subtitle {
     margin-top: 10px;
@@ -59,14 +58,14 @@
     justify-content: space-between;
     &:hover {
       .skills__level-title.label::before {
-        background-color: var(--color-accent-second);
+        background: var(--color-accent-second);
         box-shadow: var(--shadow-btn-hover);
       }
     }
     &-scale {
     height: 14px;
     width: 100%;
-    background-color: var(--background-indicator);
+    background: var(--background-indicator);
     border-radius: 4px;
     position: relative;
     }

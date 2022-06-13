@@ -1,6 +1,5 @@
 .about {
-  padding-top: clamp(60px, 7vw, 120px);
-  padding-bottom: clamp(60px, 7vw, 120px);
+  padding: clamp(60px, 7vw, 120px) 0;
   @include image-set ('@img/bg1_1920x840');
   @include bg-cover;
   color: var(--color-background-text);
@@ -45,7 +44,7 @@
   }
   &:hover {
     .background-box {
-      background-color: var(--color-accent-second);
+      background: var(--color-accent-second);
       box-shadow: var(--shadow-btn-hover);
     }
   }

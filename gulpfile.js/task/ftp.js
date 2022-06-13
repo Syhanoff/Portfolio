@@ -26,8 +26,8 @@ const ftpTask = () => {
       message: "Error: <%= error.message %>"
       })
     ))
-    .pipe(configFTP.newer(`/${ftpRoute.ftpFolder}/${rootFolder}`))
-    .pipe(configFTP.dest(`/${ftpRoute.ftpFolder}/${rootFolder}`));
+    .pipe(configFTP.newer(`/${ftpRoute.ftpFolder}/`))
+    .pipe(configFTP.dest(`/${ftpRoute.ftpFolder}/`));
 }
 
 module.exports = ftpTask;

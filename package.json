@@ -9,7 +9,7 @@
     "dev": "gulp",
     "build": "gulp --production",
     "zip": "gulp deployZip",
-    "ftp": "gulp deployFtp"
+    "ftp": "gulp deployFtp --production"
   },
   "browserslist": [
     "last 2 versions",

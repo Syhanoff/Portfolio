@@ -1,6 +1,5 @@
 .portfolio {
-  padding-top: clamp(60px, 7vw, 120px);
-  padding-bottom: clamp(60px, 7vw, 120px);
+  padding: clamp(60px, 7vw, 120px) 0;
   &__wrapper {
     margin-top: clamp(30px, 5vw, 50px);
     display: grid;

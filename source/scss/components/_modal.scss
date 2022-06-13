@@ -6,15 +6,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--color-overlay);
+    background: var(--color-overlay);
     z-index: 109;
     overflow-y: auto;
     overflow-x: hidden;
     cursor: pointer;
-    // transition: var(--transition-base);
   }
   &__close {
-    background-color: transparent;
+    background: transparent;
     display: block;
     color: var(--color-accent-main);
     font-size: 50px;
@@ -40,7 +39,6 @@
     box-shadow: var(--shadow-modal);
     z-index: 110;
     cursor: default;
-    // transition: var(--transition-base);
     &-certificate {
       display: none;
       background: var(--color-main);
@@ -111,9 +109,8 @@
     position: relative;
     max-width: 600px;
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto 0;
     height: auto;
-    margin-top: 30px;
   }
   &__img-varia1 {
     position: absolute;
@@ -135,7 +132,7 @@
     z-index: 10;
     width: 2px;
     height: calc(100% - 5px);
-    background-color: var(--color-accent-main);
+    background: var(--color-accent-main);
     &::after {
       content: "";
       position: absolute;
@@ -144,7 +141,7 @@
       border-radius: 100%;
       width: 30px;
       height: 30px;
-      background-color: var(--color-accent-main);
+      background: var(--color-accent-main);
       transform: translate(-50%, -50%);
     }
   }
@@ -192,7 +189,5 @@
   .active {
     display: block;
     animation: slit-in-vertical 0.45s ease-out both;
-    // animation: unset;
-    // transition: var(--transition-base);
   }
 }

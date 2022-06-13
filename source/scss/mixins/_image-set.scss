@@ -2,9 +2,14 @@
   background-image: url("#{$pathToImage}.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
   background-image: image-set(
-  /* stylelint-disable-next-line function-comma-newline-after */
-    "#{$pathToImage}.avif"type("image/avif"),
-    "#{$pathToImage}.webp"type("image/webp"),
-    "#{$pathToImage}.jpg"type("image/jpg")
-  );
+    /* stylelint-disable-next-line function-comma-newline-after */
+      url("#{$pathToImage}.avif") 1x,
+      url("#{$pathToImage}.webp") 1x,
+      url("#{$pathToImage}.jpg") 1x
+    );
+  // background-image: image-set(
+  // /* stylelint-disable-next-line function-comma-newline-after */
+  //   "#{$pathToImage}.avif" type("image/avif"),
+  //   "#{$pathToImage}.webp" type("image/webp"),
+  //   "#{$pathToImage}.jpg" type("image/jpg"));
 }
