@@ -27,45 +27,89 @@ const setting = require('../config/setting');
 
 // Обработка SCSS
 const stylesTask = () => {
-  src(route.scss.srcLibs, { sourcemaps: setting.isDev })
+  src(route.scss.srcLibsCritical, { sourcemaps: setting.isDev })
     .pipe(plumber(
       notify.onError({
-      title: "SCSSLibs",
+      title: "SCSSLibsCritical",
       message: "Error: <%= error.message %>"
       })
     ))
     .pipe(sass.sync(setting.sass))
+    .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
     .pipe(size({
-      title: "libs.css"
+      title: "libs-critical.css"
     }))
     .pipe(purgecss(setting.purgecss))
     .pipe(cleanCss(setting.cleanCss))
     .pipe(rename(setting.rename))
     .pipe(size({
-      title: "libs.min.css"
+      title: "libs-critical.min.css"
     }))
     .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev });
-  return src(route.scss.src, { sourcemaps: setting.isDev })
+
+    src(route.scss.srcLibsAsync, { sourcemaps: setting.isDev })
     .pipe(plumber(
       notify.onError({
-      title: "SCSS",
+      title: "SCSSLibsAsync",
+      message: "Error: <%= error.message %>"
+      })
+    ))
+    .pipe(sass.sync(setting.sass))
+    .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
+    .pipe(size({
+      title: "libs-async.css"
+    }))
+    .pipe(purgecss(setting.purgecss))
+    .pipe(cleanCss(setting.cleanCss))
+    .pipe(rename(setting.rename))
+    .pipe(size({
+      title: "libs-async.min.css"
+    }))
+    .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev });
+
+    src(route.scss.srcCritical, { sourcemaps: setting.isDev })
+    .pipe(plumber(
+      notify.onError({
+      title: "SCSS-Critical",
       message: "Error: <%= error.message %>"
       })
     ))
     .pipe(sassGlob())
     .pipe(sass.sync(setting.sass))
-    // .pipe(avifWebpCss())
     .pipe(replace(/@img\//g, '../img/'))
     .pipe(autoprefixer(setting.autoprefixer))
     .pipe(gulpif(setting.isProd, group()))
     .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
     .pipe(gulpif(setting.isProd, size({
-      title: "style.css"
+      title: "style-critical.css"
     })))
     .pipe(gulpif(setting.isProd, cleanCss(setting.cleanCss)))
     .pipe(rename(setting.rename))
     .pipe(gulpif(setting.isProd, size({
-      title: "style.min.css"
+      title: "style-critical.min.css"
+    })))
+    .pipe(dest(route.scss.dest, { sourcemaps: setting.isDev }))
+
+  return src(route.scss.srcAsync, { sourcemaps: setting.isDev })
+    .pipe(plumber(
+      notify.onError({
+      title: "SCSS-Async",
+      message: "Error: <%= error.message %>"
+      })
+    ))
+    .pipe(sassGlob())
+    .pipe(sass.sync(setting.sass))
+    .pipe(replace(/@img\//g, '../img/'))
+    .pipe(autoprefixer(setting.autoprefixer))
+    .pipe(gulpif(setting.isProd, group()))
+    .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
+    .pipe(gulpif(setting.isProd, size({
+      title: "style-async.css"
+    })))
+    .pipe(gulpif(setting.isProd, cleanCss(setting.cleanCss)))
+    .pipe(rename(setting.rename))
+    .pipe(gulpif(setting.isProd, size({
+      title: "style-async.min.css"
     })))
     .pipe(dest(route.scss.dest, { sourcemaps: setting.isDev }))
     .pipe(browserSync.stream());
@@ -73,3 +117,53 @@ const stylesTask = () => {
 
 
 module.exports = stylesTask;
+
+
+
+
+
+// const stylesTask = () => {
+//   src(route.scss.srcLibs, { sourcemaps: setting.isDev })
+//     .pipe(plumber(
+//       notify.onError({
+//       title: "SCSSLibs",
+//       message: "Error: <%= error.message %>"
+//       })
+//     ))
+//     .pipe(sass.sync(setting.sass))
+//     .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
+//     .pipe(size({
+//       title: "libs.css"
+//     }))
+//     .pipe(purgecss(setting.purgecss))
+//     .pipe(cleanCss(setting.cleanCss))
+//     .pipe(rename(setting.rename))
+//     .pipe(size({
+//       title: "libs.min.css"
+//     }))
+//     .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev });
+//   return src(route.scss.src, { sourcemaps: setting.isDev })
+//     .pipe(plumber(
+//       notify.onError({
+//       title: "SCSS",
+//       message: "Error: <%= error.message %>"
+//       })
+//     ))
+//     .pipe(sassGlob())
+//     .pipe(sass.sync(setting.sass))
+//     // .pipe(avifWebpCss())
+//     .pipe(replace(/@img\//g, '../img/'))
+//     .pipe(autoprefixer(setting.autoprefixer))
+//     .pipe(gulpif(setting.isProd, group()))
+//     .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
+//     .pipe(gulpif(setting.isProd, size({
+//       title: "style.css"
+//     })))
+//     .pipe(gulpif(setting.isProd, cleanCss(setting.cleanCss)))
+//     .pipe(rename(setting.rename))
+//     .pipe(gulpif(setting.isProd, size({
+//       title: "style.min.css"
+//     })))
+//     .pipe(dest(route.scss.dest, { sourcemaps: setting.isDev }))
+//     .pipe(browserSync.stream());
+// }

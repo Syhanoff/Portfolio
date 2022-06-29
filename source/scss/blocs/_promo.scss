@@ -1,23 +1,23 @@
 .promo {
   position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &__alignment {
-    height: calc(var(--vh) * 100);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
   }
 }
 
 .offer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   &__title {
     @include adaptiv-font(80,44);
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     margin-top: 13px;
-    max-width: 511px;
-    width: 100%;
   }
   &__btns {
     display: flex;

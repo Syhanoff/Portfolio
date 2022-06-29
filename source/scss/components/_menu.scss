@@ -4,9 +4,9 @@
   left: -100%;
   visibility: hidden;
   opacity: 0;
-  z-index: 1000;
+  z-index: 899;
   width: 100vw;
-  height: calc(var(--vh) * 100);
+  height: 100vh;
   transition: var(--transition-base);
   &.active {
     left: 20px;
@@ -20,48 +20,43 @@
     background: var(--gradient-menu);
     position: absolute;
     display: block;
-    position: fixed;
+    // position: fixed;
     top: 50%;
     z-index: 100;
     transform: translateY(-50%);
   }
   &__list {
-    margin: 50% auto;
+    margin: 25% auto;
+    text-align: center;
   }
   &__link {
     font-size: 24px;
     line-height: 1.5;
     font-weight: 400;
-    text-align: center;
     position: relative;
-    a {
-      cursor: pointer;
-      position: relative;
-      color: var(--color-background-text);
-      text-decoration: none;
-      padding: 10px;
-      display: inline-block;
-      overflow: hidden;
-      &:before, &:after {
-        content: '';
-        position: absolute;
-        transition: var(--transition-base);
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: var(--color-background-text);
-      }
-      &:before {
-        bottom: 0;
-        transform:  translateX(-100%);
-      }
-      &:after {
-        top: 0;
-        transform:  translateX(100%);
-      }
-      &:hover:before, &:hover:after {
-        transform:  translateX(0);
-      }
+    color: var(--color-background-text);
+    padding: 10px;
+    display: inline-block;
+    overflow: hidden;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      transition: var(--transition-base);
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--color-background-text);
+    }
+    &:before {
+      bottom: 0;
+      transform:  translateX(-100%);
+    }
+    &:after {
+      top: 0;
+      transform:  translateX(100%);
+    }
+    &:hover:before, &:hover:after {
+      transform:  translateX(0);
     }
   }
   &__overlay {

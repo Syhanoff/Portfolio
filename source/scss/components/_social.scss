@@ -6,16 +6,16 @@
   top: 50%;
   left: 50px;
   transform: translateY(-50%);
-  z-index: 999;
+  z-index: 799;
   &:hover {
     .social-wrap__dash {
       height: 120px;
     }
     .social-wrap__link:not(:last-child) {
-      margin: 30px 0 0;
+      margin: 15px 0 0;
     }
     .social-wrap__text {
-      letter-spacing: 5px;
+      letter-spacing: 3px;
     }
   }
   &__text {
@@ -50,16 +50,10 @@
     height: 20px;
     transition: var(--transition-base);
     &:not(:last-child) {
-      margin: 15px 0 0;
-    }
-    svg path {
-      fill: var(--color-icon-link);
+      margin: 10px 0 0;
     }
     &:hover {
       transform: scale(2) rotate(0deg);
-      svg path {
-        fill: var(--color-accent-second);
-      }
     }
     &_menu {
       transform: rotate(0deg);
@@ -69,6 +63,13 @@
       &:last-child {
         margin-top: 0;
       }
+    }
+  }
+  &__icon {
+    color: var(--color-icon-link);
+    transition: var(--transition-base);
+    &:hover {
+      color: var(--color-accent-second);
     }
   }
 }

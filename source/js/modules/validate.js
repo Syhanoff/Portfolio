@@ -55,50 +55,34 @@ validation
   },
 ])
 
-document.querySelector('form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  let tk = '';
-  grecaptcha.ready(function() {
-    grecaptcha.execute('.', {action: 'homepage'}).then(function(token) {
-      tk = token;
-      document.getElementById('token').value = token;
-      const data = new URLSearchParams();
-      for (const pair of new FormData(document.querySelector('form'))) {
-          data.append(pair[0], pair[1]);
+.onSuccess((event) => {
+  console.log('Validation passes and form submitted', event);
+
+  let formData = new FormData(event.target);
+
+  console.log(...formData);
+
+  let xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log('Отправлено');
+
+modalСonfirm.classList.add('active');
+overlayСonfirm.classList.add('active');
+
       }
-      fetch('mail.php', {
-        method: 'post',
-        body: data,
-      })
-      .then(response => response.json())
-      .then(result => {
-        if (result['om_score'] >= 0.5) {
-          console.log('Человек')
-          .onSuccess((event) => {
-            console.log('Validation passes and form submitted', event);
-            let formData = new FormData(event.target);
-            console.log(...formData);
-            let xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-              if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                  console.log('Отправлено');
-                  overlayСonfirm.classList.add('active');
-                  modalСonfirm.classList.add('active');
-                }
-              }
-            }
-            xhr.open('POST', 'mail.php', true);
-            xhr.send(formData);
-            event.target.reset();
-          });
-        } else {
-          console.log('Бот')
-        }
-      });
-    });
-  });
-})
+    }
+  }
+
+  xhr.open('POST', 'mail.php', true);
+  xhr.send(formData);
+
+  event.target.reset();
+});
+
+
 
 modalСonfirmСlose.addEventListener('click', function() {
   modalСonfirm.classList.remove('active');

@@ -9,8 +9,10 @@ module.exports = {
     dest: routeDest
   },
   scss: {
-    src: routeSrc + "scss/style.+(scss|sass)",
-    srcLibs: routeSrc + "scss/libs.+(scss|sass)",
+    srcCritical: routeSrc + "scss/style-critical.+(scss|sass)",
+    srcAsync: routeSrc + "scss/style-async.+(scss|sass)",
+    srcLibsCritical: routeSrc + "scss/libs-critical.+(scss|sass)",
+    srcLibsAsync: routeSrc + "scss/libs-async.+(scss|sass)",
     watch: [routeSrc + "scss/**/*.+(scss|sass|css)", "!" + routeSrc + "scss/libs/*.*"],
     dest: routeDest + "css/"
   },

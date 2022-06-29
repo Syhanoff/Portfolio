@@ -7,7 +7,7 @@
     right: 0;
     bottom: 0;
     background: var(--color-overlay);
-    z-index: 109;
+    z-index: 1000;
     overflow-y: auto;
     overflow-x: hidden;
     cursor: pointer;
@@ -18,14 +18,19 @@
     color: var(--color-accent-main);
     font-size: 50px;
     line-height: 25px;
-    position: absolute;
-    top: -30px;
-    right: -40px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
     transition: var(--transition-base);
-    z-index: 100;
+    z-index: 1002;
     &:hover {
       transform: scale(1.5) rotate(360deg);
       color: var(--color-accent-second);
+    }
+    &_buttom {
+      top: unset;
+      bottom: 20px;
+      right: 20px;
     }
   }
   &__wrapper {
@@ -37,7 +42,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     box-shadow: var(--shadow-modal);
-    z-index: 110;
+    z-index: 1010;
     cursor: default;
     &-certificate {
       display: none;
@@ -46,7 +51,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 110;
+      z-index: 1003;
       width: 90%;
     }
   }
@@ -163,11 +168,17 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+      &-wrapper:not(:last-child) {
+      margin-right: 20px;
+      }
     &-subtitle {
       margin-bottom: 10px;
     }
-    &-inner:not(:last-child) {
-      margin-right: 20px;
+    &-inner {
+      display: flex;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
     }
   }
   &__link {
@@ -175,19 +186,25 @@
     transition: var(--transition-base);
     width: 20px;
     height: 20px;
-    display: inline-block;
-    svg path {
-      fill: var(--color-icon-link);
-    }
     &:hover {
       transform: scale(2) rotate(360deg);
-      svg path {
-        fill: var(--color-accent-second);
-      }
+    }
+  }
+  &__icon {
+    color: var(--color-icon-link);
+    &:hover {
+      color: var(--color-accent-second);
     }
   }
   .active {
     display: block;
     animation: slit-in-vertical 0.45s ease-out both;
   }
+}
+
+.fix {
+  position: fixed;
+  right: 0;
+  left: 0;
+  overflow: hidden;
 }

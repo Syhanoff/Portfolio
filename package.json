@@ -28,6 +28,7 @@
     "@babel/preset-env": "^7.16.4",
     "babel-loader": "^8.2.3",
     "browser-sync": "^2.27.7",
+    "critical": "^4.0.1",
     "del": "^6.0.0",
     "editorconfig-checker": "^4.0.2",
     "gulp": "^4.0.2",

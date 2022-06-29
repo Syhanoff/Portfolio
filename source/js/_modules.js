@@ -1,4 +1,3 @@
-import './modules/adaptive-height';
 import './modules/burger';
 import './modules/buttonup';
 import './modules/card';

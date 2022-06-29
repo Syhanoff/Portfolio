@@ -53,7 +53,7 @@ Array.from(split1.querySelectorAll('.letter1')).forEach((el, idx) => {
 });
 
 Array.from(split2.querySelectorAll('.letter2')).forEach((el, idx) => {
-	gsap.from(el, 2.5, {
+	gsap.from(el, 4.5, {
 		opacity: 0,
 		scale: .1,
 		x: random(-300, 300),
@@ -65,7 +65,7 @@ Array.from(split2.querySelectorAll('.letter2')).forEach((el, idx) => {
 });
 
 Array.from(split3.querySelectorAll('.letter3')).forEach((el, idx) => {
-	gsap.from(el, 2.5, {
+	gsap.from(el, 6.5, {
 		opacity: 0,
 		scale: .1,
 		x: random(-300, 300),
@@ -91,7 +91,7 @@ function animateFrom(elem, direction) {
   elem.style.transform = "translate(" + x + "px, " + y + "px)";
   elem.style.opacity = "0";
   gsap.fromTo(elem, {x: x, y: y, autoAlpha: 0}, {
-    duration: 1.25,
+    duration: 1.5,
     x: 0,
     y: 0,
     autoAlpha: 1,

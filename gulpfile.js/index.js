@@ -22,6 +22,7 @@ const assets = require('./task/assets');
 const zip = require('./task/zip');
 const ftp = require('./task/ftp');
 const favicon = require('./task/favicon');
+const criticalCSS = require('./task/criticalcss');
 
 
 // Сервер
@@ -68,10 +69,11 @@ exports.assets = assets;
 exports.zip = zip;
 exports.ftp = ftp;
 exports.favicon = favicon;
+exports.criticalCSS = criticalCSS;
 
 
 // Сборка
-const build = series(clear, parallel(html, img, ogimg, favicon, svg, fonts, assets, js), fontFace, scss);
+const build = series(clear, parallel(html, img, ogimg, svg, fonts, assets, js), fontFace, scss);
 const dev = series(build, parallel(watcher, server));
 exports.default = setting.isProd ? build : dev;
 exports.deployZip = series(build, zip);

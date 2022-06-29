@@ -1,0 +1,96 @@
+/* Large: 992px - 1199px */
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+  .cookie {
+    &__box {
+      width: 90%;
+    }
+  }
+}
+
+/* Medium: 768px - 991px */
+@media (max-width: 991px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+/* Small: 576px - 767px */
+@media (max-width: 767px) {
+  .container {
+		max-width: 540px;
+	}
+  .offer {
+    &__text-box {
+      display: none;
+    }
+  }
+  .burger {
+    top: 20px;
+    right: 20px;
+  }
+  .theme {
+    top: 20px;
+    left: 20px;
+  }
+  .buttonup {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+/* Extra small: 0px (320px) - 575px */
+@media (max-width: 575px) {
+  .container {
+    padding: 0 15px;
+  }
+  .menu {
+    &__block {
+    max-width: 250px;
+    }
+  }
+  .offer {
+    &__btns {
+      justify-content: center;
+    }
+    &__label {
+      text-align: center;
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  .cookie {
+    &__box{
+      flex-direction: column;
+    }
+    &__txt {
+      text-align: center;
+    }
+    &__btn {
+      padding: 5px 20px;
+      margin: 10px auto 0;
+    }
+  }
+  .decor-link {
+    line-height: 12px;
+    &:before {
+      height: 1px;
+    }
+  }
+  .menu {
+    &__list {
+      margin: 25% auto;
+    }
+  }
+}
+
+/* Hide social block */
+@media (max-width: 1439px) {
+  .social-wrap {
+    display: none;
+  }
+}

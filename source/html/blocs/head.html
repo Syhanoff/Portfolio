@@ -33,12 +33,12 @@
 
   <!-- Fonts -->
   <link rel="preload" href="fonts/SourceSansPro-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Styling -->
-  <link rel="stylesheet" href="css/libs.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" as="style" href="css/libs-critical.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="css/style-critical.min.css" onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- Scripts -->
-  <script src="https://www.google.com/recaptcha/api.js?render=" async defer></script>
   <script defer src="js/main.min.js"></script>
 </head>

@@ -1,20 +1,20 @@
 .decor-link {
-  cursor: pointer;
   position: relative;
-  color: var(--color-second);
-  text-decoration: none;
-  padding-bottom: 3px;
-  line-height: 24px;
+  color: var(--color-accent-main);
+  transition: var(--transition-base);
+  &:hover {
+    color: var(--color-accent-second);
+  }
   &:before {
     content: '';
     position: absolute;
     transition: var(--transition-base);
     left: 0;
-    bottom: 0;
+    bottom: -2px;
     width: 100%;
     display: block;
     height: 2px;
-    background: var(--color-accent-main);
+    background: var(--color-accent-second);
     transform:  scaleX(0);
   }
   &:hover:before {
