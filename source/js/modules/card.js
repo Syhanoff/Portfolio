@@ -26,7 +26,9 @@ class Item {
 
 nodes.forEach(node => new Item(node));
 
-
+// if(innerWidth > 991) {
+//   nodes.forEach(node => new Item(node));
+// };
 
 
 

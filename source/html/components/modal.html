@@ -1,8 +1,8 @@
 <div class="modal" >
-  <div class="modal__overlay">
+  <div class="modal__overlay active-overlay">
 
     <!-- Окно подтверждения -->
-    <div class="modal__wrapper" data-modal="mail">
+    <div class="modal__wrapper active" data-modal="mail">
         <h2 class="modal__title title decorline decorline_center">Вы невероятны!</h2>
         <p class="modal__desc">Сообщение улетело. Прилетит, посмотрю, отвечу.</p>
         <button type="button" class="modal__btn btn">Супер!</button>
@@ -37,8 +37,8 @@
         <img loading="lazy" decoding="async" src="@img/work_design1-1.jpg" class="modal__img hover-mouse" width="600" alt="Превью дизайн-работы главной страницы Autel Evo II для десктопа">
         <div class="modal__video-box hover-mouse">
           <div class="modal__video-play" id="video-play"></div>
-          <video id="video-box" class="modal__video" loop preload="metadata" poster="@img/work_design1.jpg" width="600" height="450">
-            <!-- <source src="drone.webm" type="video/webm"> -->
+          <video id="video-box" class="modal__video" controls preload="metadata" poster="@img/work_design1.jpg" width="600" height="450">
+            <source src="drone.webm" type="video/webm">
             <source src="drone.mp4" type="video/mp4">
           </video>
         </div>

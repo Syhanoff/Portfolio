@@ -16,7 +16,7 @@
   &__txt {
     margin-top: clamp(30px, 5vw, 50px);
     width: 100%;
-    p:not(:first-child ) {
+    &_indent {
       margin-top: 5px;
     }
   }
@@ -37,13 +37,11 @@
   &__txt {
     margin-top: 10px;
   }
-  &__background-box {
-    path {
-      fill: var(--color-background-text);
-    }
+  &__icon {
+    color: var(--color-background-text);
   }
   &:hover {
-    .background-box {
+    .box-icon {
       background: var(--color-accent-second);
       box-shadow: var(--shadow-btn-hover);
     }

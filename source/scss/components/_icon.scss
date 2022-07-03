@@ -1,19 +1,16 @@
-.background-box {
+.box-icon {
     min-width: 36px;
     height: 36px;
     border-radius: 100%;
-    display: block;
     background: var(--color-accent-main);
     position: relative;
     transition: var(--transition-base);
-    &__icon {
+    &__content {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 30px;
     height: 30px;
-    path {
-      fill: var(--color-second);
-    }
+    color: var(--color-second);
   }
 }

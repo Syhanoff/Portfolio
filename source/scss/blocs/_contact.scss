@@ -126,11 +126,14 @@
       padding: 0 10px;
       top: -10px;
       left: 12px;
+
       &_policy {
         position: static;
         background: transparent;
         display: flex;
         align-items: center;
+        user-select: none;
+        cursor: pointer;
       }
     }
     &-send {
@@ -142,6 +145,7 @@
     &-policy {
       align-items: center;
       display: flex;
+      cursor: pointer;
     }
   }
 }
@@ -155,6 +159,6 @@
   }
 }
 
-.grecaptcha-badge {
-  visibility: hidden;
-}
+// .grecaptcha-badge {
+//   visibility: hidden;
+// }

@@ -39,7 +39,7 @@
       background: var(--color-second);
     }
     &:hover {
-      .background-box {
+      .box-icon {
         background: var(--color-accent-second);
         box-shadow: var(--shadow-btn-hover);
       }
@@ -70,7 +70,7 @@
   }
 }
 .resume-item {
-  &__background-box {
+  &__box-icon {
     margin-right: 20px;
   }
 }

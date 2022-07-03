@@ -134,6 +134,14 @@
     &__wrapper {
       grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     }
+    &__link {
+      &_hidden {
+        display: none;
+      }
+    }
+    &__more-btn {
+      display: block;
+    }
   }
   .price {
     &__wrapper {
@@ -240,6 +248,12 @@
     &__link {
       display: flex;
       justify-content: center;
+      &_hidden {
+        display: none;
+      }
+    }
+    &__more-btn {
+      margin-left: 82px;
     }
   }
   .price {
@@ -301,7 +315,7 @@
   }
   .skill-item {
     flex-direction: column;
-    &__background-box {
+    &__box-icon {
       margin: 0 auto 20px;
       max-width: 36px;
     }
@@ -312,6 +326,11 @@
   .resume {
     &__box {
       grid-template-columns: auto;
+    }
+  }
+  .portfolio {
+    &__more-btn {
+      margin: 15px auto 0;
     }
   }
   .skills {

@@ -13,6 +13,7 @@ import './modules/swiper';
 import './modules/theme';
 import './modules/validate';
 import './modules/video';
+import './modules/showmore';
 
 
 

@@ -70,7 +70,7 @@ validation
         console.log('Отправлено');
 
 modalСonfirm.classList.add('active');
-overlayСonfirm.classList.add('active');
+overlayСonfirm.classList.add('active-overlay');
 
       }
     }
@@ -86,5 +86,5 @@ overlayСonfirm.classList.add('active');
 
 modalСonfirmСlose.addEventListener('click', function() {
   modalСonfirm.classList.remove('active');
-  overlayСonfirm.classList.remove('active');
+  overlayСonfirm.classList.remove('active-overlay');
 });

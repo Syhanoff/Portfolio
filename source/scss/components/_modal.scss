@@ -200,11 +200,18 @@
     display: block;
     animation: slit-in-vertical 0.45s ease-out both;
   }
+  .active-overlay {
+    display: block;
+    transform: translateZ(0);
+  }
 }
 
-.fix {
-  position: fixed;
-  right: 0;
-  left: 0;
+.fix-scroll {
   overflow: hidden;
+  // position: relative;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
 }
