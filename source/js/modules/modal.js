@@ -1,7 +1,8 @@
 const modalButtons = document.querySelectorAll('.portfolio__link'),
       modalButtonsCertificate = document.querySelectorAll('.resume__btn'),
-      overlay      = document.querySelector('.modal__overlay'),
+      overlay      = document.getElementById('overlay'),
       modalWrap    = document.querySelector('.modal__wrapper'),
+      modalCertificate    = document.querySelectorAll('.modal__wrapper-certificate'),
       closeButtons = document.querySelectorAll('.modal__close'),
       htmlModal = document.documentElement;
 
@@ -44,7 +45,23 @@ closeButtons.forEach(function(item){
   });
 });
 
+
+modalCertificate.forEach(function(item){
+  item.addEventListener('click', function() {
+    const parentModal = this.closest('.modal__wrapper-certificate[data-modal]');
+    parentModal.classList.remove('active');
+    overlay.classList.remove('active-overlay');
+
+    let pagePosition = parseInt(htmlModal.dataset.position, 10);
+    htmlModal.style.top = 'auto';
+    htmlModal.classList.remove('fix-scroll');
+    window.scroll({ top: pagePosition, left: 0 });
+    htmlModal.removeAttribute('data-position');
+    htmlModal.style.top = "";
+  });
+});
+
 overlay.addEventListener('click', function() {
-  document.querySelector('.modal__wrapper-certificate.active').classList.remove('active');
-  this.classList.remove('active');
+  // modalCertificate.classList.remove('active');
+  // overlay.classList.remove('active-overlay');
 });
