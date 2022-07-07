@@ -1,5 +1,6 @@
 .modal {
   &__overlay {
+    scrollbar-width: none;
     display: none;
     position: fixed;
     top: 0;
@@ -11,6 +12,10 @@
     overflow-y: auto;
     overflow-x: hidden;
     cursor: pointer;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
   }
   &__close {
     background: transparent;

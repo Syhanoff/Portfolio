@@ -61,7 +61,9 @@ modalCertificate.forEach(function(item){
   });
 });
 
-overlay.addEventListener('click', function() {
+overlay.addEventListener('click', function(e) {
   // modalCertificate.classList.remove('active');
   // overlay.classList.remove('active-overlay');
 });
+
+

@@ -1,5 +1,11 @@
 html {
   box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 *,

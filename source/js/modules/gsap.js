@@ -201,7 +201,11 @@ const magneticMouseEvent = {
 	}
 }
 
-magneticMouseEvent.onInit();
-window.addEventListener('mousemove' , e =>{
-	magneticMouseEvent.onMouseMove(e);
-});
+
+
+if (document.documentElement.clientWidth > 991) {
+  magneticMouseEvent.onInit();
+  window.addEventListener('mousemove' , e =>{
+    magneticMouseEvent.onMouseMove(e);
+  });
+}
