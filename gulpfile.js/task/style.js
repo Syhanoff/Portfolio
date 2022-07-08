@@ -27,47 +27,77 @@ const setting = require('../config/setting');
 
 // Обработка SCSS
 const stylesTask = () => {
-  src(route.scss.srcLibsCritical, { sourcemaps: setting.isDev })
-    .pipe(plumber(
-      notify.onError({
-      title: "SCSSLibsCritical",
-      message: "Error: <%= error.message %>"
-      })
-    ))
-    .pipe(sass.sync(setting.sass))
-    .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
-    .pipe(size({
-      title: "libs-critical.css"
-    }))
-    .pipe(purgecss(setting.purgecss))
-    .pipe(cleanCss(setting.cleanCss))
-    .pipe(rename(setting.rename))
-    .pipe(size({
-      title: "libs-critical.min.css"
-    }))
-    .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev });
+  // src(route.scss.srcLibs, { sourcemaps: setting.isDev })
+  // .pipe(plumber(
+  //   notify.onError({
+  //   title: "SCSSLibs",
+  //   message: "Error: <%= error.message %>"
+  //   })
+  // ))
+  // .pipe(sass.sync(setting.sass))
+  // .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
+  // .pipe(size({
+  //   title: "libs-critical.css"
+  // }))
+  // .pipe(purgecss(setting.purgecss))
+  // .pipe(cleanCss(setting.cleanCss))
+  // .pipe(rename(setting.rename))
+  // .pipe(size({
+  //   title: "libs-critical.min.css"
+  // }))
+  // .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev });
 
-    src(route.scss.srcLibsAsync, { sourcemaps: setting.isDev })
-    .pipe(plumber(
-      notify.onError({
-      title: "SCSSLibsAsync",
-      message: "Error: <%= error.message %>"
-      })
-    ))
-    .pipe(sass.sync(setting.sass))
-    .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
-    .pipe(size({
-      title: "libs-async.css"
-    }))
-    .pipe(purgecss(setting.purgecss))
-    .pipe(cleanCss(setting.cleanCss))
-    .pipe(rename(setting.rename))
-    .pipe(size({
-      title: "libs-async.min.css"
-    }))
-    .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev });
 
-    src(route.scss.srcCritical, { sourcemaps: setting.isDev })
+
+
+  // src(route.scss.srcLibsCritical, { sourcemaps: setting.isDev })
+  //   .pipe(plumber(
+  //     notify.onError({
+  //     title: "SCSSLibsCritical",
+  //     message: "Error: <%= error.message %>"
+  //     })
+  //   ))
+  //   .pipe(sass.sync(setting.sass))
+  //   .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
+  //   .pipe(size({
+  //     title: "libs-critical.css"
+  //   }))
+  //   .pipe(purgecss(setting.purgecss))
+  //   .pipe(cleanCss(setting.cleanCss))
+  //   .pipe(rename(setting.rename))
+  //   .pipe(size({
+  //     title: "libs-critical.min.css"
+  //   }))
+  //   .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev });
+
+
+
+
+  //   src(route.scss.srcLibsAsync, { sourcemaps: setting.isDev })
+  //   .pipe(plumber(
+  //     notify.onError({
+  //     title: "SCSSLibsAsync",
+  //     message: "Error: <%= error.message %>"
+  //     })
+  //   ))
+  //   .pipe(sass.sync(setting.sass))
+  //   .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
+  //   .pipe(size({
+  //     title: "libs-async.css"
+  //   }))
+  //   .pipe(purgecss(setting.purgecss))
+  //   .pipe(cleanCss(setting.cleanCss))
+  //   .pipe(rename(setting.rename))
+  //   .pipe(size({
+  //     title: "libs-async.min.css"
+  //   }))
+  //   .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev });
+
+
+
+
+
+    src(route.style.srcCritical, { sourcemaps: setting.isDev })
     .pipe(plumber(
       notify.onError({
       title: "SCSS-Critical",
@@ -79,7 +109,7 @@ const stylesTask = () => {
     .pipe(replace(/@img\//g, '../img/'))
     .pipe(autoprefixer(setting.autoprefixer))
     .pipe(gulpif(setting.isProd, group()))
-    .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
+    .pipe(dest(route.style.dest), { sourcemaps: setting.isDev })
     .pipe(gulpif(setting.isProd, size({
       title: "style-critical.css"
     })))
@@ -88,9 +118,13 @@ const stylesTask = () => {
     .pipe(gulpif(setting.isProd, size({
       title: "style-critical.min.css"
     })))
-    .pipe(dest(route.scss.dest, { sourcemaps: setting.isDev }))
+    .pipe(dest(route.style.dest, { sourcemaps: setting.isDev }))
 
-  return src(route.scss.srcAsync, { sourcemaps: setting.isDev })
+
+
+
+
+  return src(route.style.srcAsync, { sourcemaps: setting.isDev })
     .pipe(plumber(
       notify.onError({
       title: "SCSS-Async",
@@ -102,7 +136,7 @@ const stylesTask = () => {
     .pipe(replace(/@img\//g, '../img/'))
     .pipe(autoprefixer(setting.autoprefixer))
     .pipe(gulpif(setting.isProd, group()))
-    .pipe(dest(route.scss.dest), { sourcemaps: setting.isDev })
+    .pipe(dest(route.style.dest), { sourcemaps: setting.isDev })
     .pipe(gulpif(setting.isProd, size({
       title: "style-async.css"
     })))
@@ -111,7 +145,7 @@ const stylesTask = () => {
     .pipe(gulpif(setting.isProd, size({
       title: "style-async.min.css"
     })))
-    .pipe(dest(route.scss.dest, { sourcemaps: setting.isDev }))
+    .pipe(dest(route.style.dest, { sourcemaps: setting.isDev }))
     .pipe(browserSync.stream());
 }
 

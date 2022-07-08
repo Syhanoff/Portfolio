@@ -15,7 +15,7 @@ const setting = require('../config/setting');
 
 // Обработка JavaScript
 const scriptsTask = () => {
-  return src(route.js.src, { sourcemaps: setting.isDev })
+  return src(route.script.src, { sourcemaps: setting.isDev })
     .pipe(plumber(
       notify.onError({
       title: "JS",
@@ -56,7 +56,7 @@ const scriptsTask = () => {
       console.error('WEBPACK ERROR', err);
       this.emit('end');
     })
-    .pipe(dest(route.js.dest), { sourcemaps: setting.isDev });
+    .pipe(dest(route.script.dest), { sourcemaps: setting.isDev });
 }
 
 module.exports = scriptsTask;

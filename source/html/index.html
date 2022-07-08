@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('blocs/head.html', {
+  @@include('include/head.html', {
     "title" : "Мой сайт-портфолио",
     "description" : "На данном сайте размещены мои работы по верстке, дизайну, програмированию",
     "site_name" : "Syhanoff",
     "keywords" : "разработка, верстка, дизайн"
   })
   <body>
-    @@include('components/metrika.html')
     @@include('components/burger.html')
     @@include('blocs/main.html')
     @@include('blocs/footer.html')
@@ -18,6 +17,6 @@
     @@include('components/menu.html')
     @@include('components/modal.html')
     @@include('components/cookie.html')
-    @@include('components/async.html')
+    @@include('include/scripts.html')
   </body>
 </html>

@@ -8,11 +8,13 @@ module.exports = {
     watch: routeSrc + "html/**/*.html",
     dest: routeDest
   },
-  scss: {
+  style: {
+    // src: routeSrc + "scss/style.+(scss|sass)",
     srcCritical: routeSrc + "scss/style-critical.+(scss|sass)",
     srcAsync: routeSrc + "scss/style-async.+(scss|sass)",
-    srcLibsCritical: routeSrc + "scss/libs-critical.+(scss|sass)",
-    srcLibsAsync: routeSrc + "scss/libs-async.+(scss|sass)",
+    // srcLibs: routeSrc + "scss/libs.+(scss|sass)",
+    // srcLibsAsync: routeSrc + "scss/libs-async.+(scss|sass)",
+    // srcLibs: routeSrc + "scss/libs.+(scss|sass)",
     watch: [routeSrc + "scss/**/*.+(scss|sass|css)", "!" + routeSrc + "scss/libs/*.*"],
     dest: routeDest + "css/"
   },
@@ -51,7 +53,7 @@ module.exports = {
     destIconSet: routeSrc + "favicon/",
     destInk: routeSrc + "html/parts/",
   },
-  js: {
+  script: {
     src: routeSrc + "js/main.js",
     watch: routeSrc + "js/**/*.js",
     dest: routeDest + "js/"

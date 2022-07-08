@@ -10,8 +10,8 @@ const setting = require('./config/setting');
 
 // Задачи
 const html = require('./task/html');
-const scss = require('./task/scss');
-const js = require('./task/js');
+const style = require('./task/style');
+const script = require('./task/script');
 const clear = require('./task/clear');
 const fonts = require('./task/fonts');
 const fontFace = require('./task/font-face');
@@ -40,13 +40,13 @@ const server = () => {
 // Наблюдение
 const watcher = () => {
   watch(route.html.watch, html).on('change', browserSync.reload);
-  watch(route.scss.watch, scss).on('change', browserSync.reload);
+  watch(route.style.watch, style).on('change', browserSync.reload);
   watch((route.fonts.watch), fonts).on('all', browserSync.reload);
   watch((route.fonts.dest), fontFace).on('all', browserSync.reload);
   watch((route.img.watch), img).on('all', browserSync.reload);
   watch((route.ogimg.watch), ogimg).on('all', browserSync.reload);
   watch((route.svg.watch), svg).on('all', browserSync.reload);
-  watch((route.js.watch), js).on('change', browserSync.reload);
+  watch((route.script.watch), script).on('change', browserSync.reload);
   watch((route.favicon.watch), favicon).on('all', browserSync.reload);
   watch((route.assets.watch), assets);
 }
@@ -57,8 +57,8 @@ exports.clear = clear;
 exports.server = server;
 exports.watcher = watcher;
 exports.html = html;
-exports.scss = scss;
-exports.js = js;
+exports.style = style;
+exports.script = script;
 exports.clear = clear;
 exports.fonts = fonts;
 exports.fontFace = fontFace;
@@ -73,7 +73,7 @@ exports.favicon = favicon;
 
 
 // Сборка
-const build = series(clear, parallel(html, img, ogimg, svg, fonts, assets, js), fontFace, scss);
+const build = series(clear, parallel(html, img, ogimg, svg, fonts, assets, script), fontFace, style);
 const dev = series(build, parallel(watcher, server));
 exports.default = setting.isProd ? build : dev;
 exports.deployZip = series(build, zip);
