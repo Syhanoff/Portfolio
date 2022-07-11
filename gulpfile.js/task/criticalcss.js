@@ -10,12 +10,14 @@ const route = require('../config/route');
 // Обработка SCSS
 const criticalCSS = (done) => {
     return critical.generate({
+      inline: true,
       base: route.html.dest,
       src: 'index.html',
-      css: [ 'css/style.css', 'css/libs.css' ],
+      css: [ 'css/style-critical.css', 'css/style-async.css' ],
       target: {
-        css: `critical.css`,
-        uncritical: `async.css`
+        // css: `critical.css`,
+        html: 'index.html',
+        uncritical: `css/async.css`
       },
       width: 1280,
       height: 480,

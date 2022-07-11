@@ -22,7 +22,7 @@ const assets = require('./task/assets');
 const zip = require('./task/zip');
 const ftp = require('./task/ftp');
 const favicon = require('./task/favicon');
-// const criticalCSS = require('./task/criticalcss');
+const criticalCSS = require('./task/criticalcss');
 
 
 // Сервер
@@ -69,7 +69,7 @@ exports.assets = assets;
 exports.zip = zip;
 exports.ftp = ftp;
 exports.favicon = favicon;
-// exports.criticalCSS = criticalCSS;
+exports.criticalCSS = criticalCSS;
 
 
 // Сборка
