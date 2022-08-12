@@ -5,7 +5,6 @@ import './modules/cookies';
 import './modules/gsap';
 import './modules/modal';
 import './modules/mouse';
-// import './modules/parallax';
 import './modules/skillsline';
 import './modules/slider';
 import './modules/smooth-scroll';
